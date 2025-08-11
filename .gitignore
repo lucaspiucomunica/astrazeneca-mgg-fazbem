@@ -1,0 +1,58 @@
+# Node.js
+node_modules/
+**/node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build / Artefatos
+build/
+dist/
+.out/
+.next/
+.cache/
+.parcel-cache/
+.tmp/
+tmp/
+temp/
+coverage/
+.sass-cache/
+.eslintcache
+
+# Ambiente
+.env
+.env.*
+!.env.example
+
+# IDEs / Editores
+.vscode/
+.idea/
+*.code-workspace
+.history/
+*.iml
+
+# SO / Arquivos temporários
+.DS_Store
+**/.DS_Store
+Thumbs.db
+**/Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Plataformas
+.vercel/
+.netlify/
+
+# Outros
+*.pid
+*.seed
+*.orig
+*.rej
+components.html

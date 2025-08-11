@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miastenia Gravis - A tempestade vai e a vida volta</title>
+
+    <link rel="stylesheet" href="src/css/output.css">
+</head>
+
+<body class="overflow-x-hidden">
+    <header class="py-6 absolute top-0 left-0 right-0 z-50 rounded-b-2xl" id="header">
+        <div class="container">
+            <div class="flex flex-row items-center justify-between gap-10">
+                <img src="src/img/logo-az-branco.webp" alt="Logo AstraZeneca" class="w-auto h-8">
+                <button id="btn-menu" class="btn btn-azul-50" aria-controls="menu-panel" aria-expanded="false">
+                    <span class="text">Menu</span>
+                    <span class="icon"><img src="src/icons/menu.svg" class="svg-inline"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav id="menu-panel" class="menu-panel" aria-hidden="true">
+        <div class="menu-inner">
+            <div class="menu-header container">
+                <h2 class="menu-title">Menu</h2>
+                <button id="btn-menu-close" class="btn" aria-label="Fechar menu">
+                    <span class="text">Fechar</span>
+                </button>
+            </div>
+            <ul class="menu-list container">
+                <li>
+                    <a class="menu-item" href="#miastenia-gravis">
+                        <div class="frame-icon frame-icon-small">
+                            <div class="frame-icon-content-icon">
+                                <img src="src/icons/information.svg" class="svg-inline">
+                            </div>
+                            <div class="frame-icon-base">
+                                <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                            </div>
+                        </div>
+                        <span class="menu-item-text">Miastenia Gravis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-item" href="#quando-o-diagnostico-chega">
+                        <div class="frame-icon frame-icon-small">
+                            <div class="frame-icon-content-icon">
+                                <img src="src/icons/calendar.svg" class="svg-inline">
+                            </div>
+                            <div class="frame-icon-base">
+                                <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                            </div>
+                        </div>
+                        <span class="menu-item-text">Quando o diagnóstico chega, pode assustar, mas também trazer alívio.</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-item" href="#entenda-a-miastenia-gravis">
+                        <div class="frame-icon frame-icon-small">
+                            <div class="frame-icon-content-icon">
+                                <img src="src/icons/microscope.svg" class="svg-inline">
+                            </div>
+                            <div class="frame-icon-base">
+                                <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                            </div>
+                        </div>
+                        <span class="menu-item-text">Entenda a Miastenia Gravis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-item" href="#sintomas-da-miastenia-gravis">
+                        <div class="frame-icon frame-icon-small">
+                            <div class="frame-icon-content-icon">
+                                <img src="src/icons/mental-health-01.svg" class="svg-inline">
+                            </div>
+                            <div class="frame-icon-base">
+                                <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                            </div>
+                        </div>
+                        <span class="menu-item-text">Sintomas da Miastenia Gravis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-item" href="#diagnostico-de-miastenia-gravis">
+                        <div class="frame-icon frame-icon-small">
+                            <div class="frame-icon-content-icon">
+                                <img src="src/icons/microscope.svg" class="svg-inline">
+                            </div>
+                            <div class="frame-icon-base">
+                                <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                            </div>
+                        </div>
+                        <span class="menu-item-text">Diagnóstico de Miastenia Gravis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-item" href="#tratamento-para-a-miastenia-gravis">
+                        <div class="frame-icon frame-icon-small">
+                            <div class="frame-icon-content-icon">
+                                <img src="src/icons/note-2.svg" class="svg-inline">
+                            </div>
+                            <div class="frame-icon-base">
+                                <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                            </div>
+                        </div>
+                        <span class="menu-item-text">Tratamento para a Miastenia Gravis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-item" href="#como-e-a-vida-com-miastenia">
+                        <div class="frame-icon frame-icon-small">
+                            <div class="frame-icon-content-icon">
+                                <img src="src/icons/play.svg" class="svg-inline">
+                            </div>
+                            <div class="frame-icon-base">
+                                <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                            </div>
+                        </div>
+                        <span class="menu-item-text">Como é a vida com Miastenia?</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-item" href="#viver-e-raro">
+                        <div class="frame-icon frame-icon-small">
+                            <div class="frame-icon-content-icon">
+                                <img src="src/icons/play.svg" class="svg-inline">
+                            </div>
+                            <div class="frame-icon-base">
+                                <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                            </div>
+                        </div>
+                        <span class="menu-item-text">Viver é Raro, uma série da GloboPlay</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-item" href="#quando-estamos-juntos-a-tempestade-passa">
+                        <div class="frame-icon frame-icon-small">
+                            <div class="frame-icon-content-icon">
+                                <img src="src/icons/business-people.svg" class="svg-inline">
+                            </div>
+                            <div class="frame-icon-base">
+                                <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                            </div>
+                        </div>
+                        <span class="menu-item-text">Quando estamos juntos a tempestade passa mais rápido – e a vida volta.</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="w-full min-h-screen overflow-hidden relative" id="hero">
+            <!-- Camada dedicada ao background para animações sem perder o cover -->
+            <div class="hero-bg absolute inset-0 -z-10 bg-hero bg-cover bg-center bg-no-repeat"></div>
+            <div class="absolute top-0 left-0 right-0 z-10 h-44 bg-gradient-to-b from-azul-principal/90 to-azul-principal/0 bg-blend-multiply"></div>
+            <div class="absolute top-1/2 -translate-y-1/2 left-0 right-0 z-10">
+                <div class="container">
+                    <div class="flex flex-row justify-end">
+                        <div class="w-5/12">
+                            <h1 class="text-azul-principal text-5xl leading-tight max-w-[380px] mb-6">A tempestade vai e a vida volta</h1>
+                            <p class="text-azul-principal max-w-[440px] text-lg mb-6">A Miastenia Gravis generalizada é uma doença rara, que pode causar fraqueza e fadiga extrema, entre outros sintomas.<sup>1,2</sup> Miastenia Gravis: com diagnóstico e manejo adequados, suas atividades do dia a dia têm menos impacto.</p>
+                            <a href="#miastenia-gravis" class="btn">
+                                <span class="text">Saiba mais</span>
+                                <span class="icon"><img src="src/icons/arrow-circle-down.svg" class="svg-inline"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="miastenia-gravis" class="pt-20 overflow-hidden">
+            <div class="container">
+                <div class="flex flex-row items-center gap-10">
+                    <div class="w-5/12">
+                        <h2 class="text-azul-principal text-4xl leading-tight mb-6">Miastenia Gravis</h2>
+                        <p class="text-lg mb-4">Olá! Se você chegou até aqui, talvez esteja em busca de respostas sobre a Miastenia Gravis, ou tentando encontrar um ponto de apoio. Por isso, este conteúdo foi formulado com informação de qualidade e, o mais importante: com cuidado, pensando em quem vive essa jornada e merece acolhimento a cada passo. Então, vamos lá. </p>
+                        <p class="text-lg">Quando a Miastenia Gravis se manifesta, é como enfrentar uma tempestade repentina. Os sintomas vêm e vão como rajadas de vento imprevisíveis. Você tenta seguir em frente, mas até descobrir o que está acontecendo, tudo parece estar à deriva.</p>
+                    </div>
+
+                    <div class="w-7/12">
+                        <img src="src/img/bg-hero.webp" alt="Miastenia Gravis" class="w-full h-auto rounded-3xl aspect-video object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quando-o-diagnostico-chega" class="w-full py-20 relative overflow-hidden">
+            <div class="container relative z-10">
+                <div class="flex flex-row items-center justify-center gap-12">
+                    <div class="w-auto">
+                        <h2 class="flex flex-col items-start text-azul-principal">
+                            <span class="text-nowrap text-4xl leading-tight">Quando o diagnóstico chega,</span>
+                            <span class="text-rosa-principal text-nowrap text-5xl leading-tight">pode assustar,</span>
+                            <span class="text-nowrap text-4xl leading-tight">mas também</span>
+                            <span class="text-azul-400 text-[80px] leading-none text-nowrap">trazer alívio.</span>
+                        </h2>
+                    </div>
+
+                    <div class="w-full max-w-[438px]">
+                        <p class="text-lg text-azul-principal">Como um raio de luz que atravessa as nuvens, ele ajuda a enxergar o caminho pela frente. E aí, com o tratamento adequado, a tempestade vai perdendo a força e a vida começa a clarear. Aos poucos, o leme volta para as suas mãos. Dá para avistar novos horizontes, reencontrar rotas, retomar planos, e voltar a viver com autonomia. A tempestade vai e a vida volta.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-0 left-0 right-0 -z-10 flex flex-row items-end justify-between">
+                <div class="w-2/5 h-auto relative">
+                    <div class="absolute top-0 left-0 right-0 z-10 w-full h-28 bg-gradient-to-b from-azul-50/100 to-azul-50/0"></div>
+                    <div class="absolute top-0 bottom-0 right-0 z-10 w-28 h-full bg-gradient-to-l from-azul-50/100 to-azul-50/0"></div>
+                    <img src="src/img/raio-luz.webp" alt="Raio de luz" class="w-full h-auto">
+                </div>
+                <div class="w-2/5 h-auto relative">
+                    <div class="absolute top-0 left-0 right-0 z-10 w-full h-28 bg-gradient-to-b from-azul-50/100 to-azul-50/0"></div>
+                    <div class="absolute top-0 bottom-0 left-0 z-10 w-28 h-full bg-gradient-to-r from-azul-50/100 to-azul-50/0"></div>
+                    <img src="src/img/raio-luz.webp" alt="Raio de luz" class="w-full h-auto -scale-x-100">
+                </div>
+            </div>
+        </section>
+
+        <section id="entenda-a-miastenia-gravis" class="py-20 bg-rosa-principal">
+            <div class="container">
+                <div class="flex flex-row items-center gap-10">
+                    <div class="w-1/2">
+                        <h2 class="text-amarelo text-4xl leading-tight mb-6">Entenda a Miastenia Gravis</h2>
+                        <p class="text-white text-lg mb-4">A palavra miastenia vem do grego. “Mys” significa músculo e “astenia” quer dizer fraqueza. Já “gravis” indica algo severo. Ou seja, Miastenia Gravis é uma condição que provoca fraqueza muscular importante.<sup>1</sup> Existem registros da doença desde o século 17 e, desde então, muita coisa evoluiu em termos de pesquisa, diagnóstico e tratamento.<sup>1</sup></p>
+                        <p class="text-white text-lg mb-4">A Miastenia Gravis (MG) é uma doença que interfere na comunicação entre os nervos e os músculos, provocando sintomas como fraqueza muscular intensa e cansaço (fadiga).<sup>2</sup> Ela pode ter duas origens: congênita, ligada a mudanças genéticas que geralmente aparecem logo na infância; ou autoimune, quando o corpo produz anticorpos que interferem na conexão entre nervos e músculos.<sup>2–4</sup></p>
+                        <p class="text-white text-lg">Por causa da fraqueza muscular e da fadiga, até tarefas simples do dia a dia podem se tornar difíceis<sup>2</sup> — como escovar os dentes, pentear o cabelo, subir escadas, falar, engolir e até abrir os olhos.<sup>1-3</sup></p>
+                    </div>
+
+                    <div class="w-1/2">
+                        <div class="bg-rosa-700 rounded-3xl overflow-hidden">
+                            <img src="src/img/ilustra-kv-2.webp" alt="Entenda a Miastenia Gravis" class="w-full h-auto">
+                            <div class="flex flex-row items-start gap-4 p-6">
+                                <div class="min-w-10 min-h-10 inline-flex items-center justify-center">
+                                    <img src="src/icons/calendar.svg" alt="Calendário" class="svg-inline w-full h-auto *:fill-amarelo">
+                                </div>
+                                <p class="text-white text-lg"><span class="font-bold text-amarelo">2 de junho é reconhecido como Dia Mundial de Conscientização da Miastenia Gravis</span>, uma data para lembrar sobre a condição e auxiliar a jornada dos pacientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-center gap-10 mt-14">
+                    <div class="w-full">
+                        <h3 class="text-amarelo text-3xl leading-tight mb-6">A Miastenia em números</h3>
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-start gap-10 mt-8">
+                    <div class="w-1/2">
+                        <div class="flex flex-col items-start gap-6">
+                            <div class="flex flex-row items-center gap-6">
+                                <div class="frame-icon frame-icon-big frame-icon-rosa-50">
+                                    <div class="frame-icon-content-icon">
+                                        <img src="src/icons/business-people.svg" class="svg-inline">
+                                    </div>
+                                    <div class="frame-icon-base">
+                                        <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                    </div>
+                                </div>
+                                <h4>
+                                    <div class="mb-2">
+                                        <span class="text-amarelo text-6xl leading-none mr-1">12,4</span>
+                                        <span class="text-white text-3xl leading-tight"> casos</span>
+                                    </div>
+                                    <div class="text-white text-3xl leading-tight">
+                                        <span>a cada</span>
+                                        <span class="text-amarelo"> 100 mil pessoas<sup>5</sup></span>
+                                    </div>
+                                </h4>
+                            </div>
+                            <p class="text-white text-lg">A Miastenia Gravis é uma doença rara com apenas 12,4 casos a cada 100 mil pessoas, de acordo com estimativas globais.<sup>5</sup></p>
+                        </div>
+                    </div>
+
+                    <div class="w-1/2">
+                        <div class="flex flex-col items-start gap-6">
+                            <div class="flex flex-row items-center gap-6">
+                                <div class="frame-icon frame-icon-big frame-icon-rosa-50">
+                                    <div class="frame-icon-content-icon">
+                                        <img src="src/icons/couple.svg" class="svg-inline">
+                                    </div>
+                                    <div class="frame-icon-base">
+                                        <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                    </div>
+                                </div>
+                                <h4>
+                                    <span class="text-white text-3xl leading-tight mb-2">Acomete principalmente </span>
+                                    <span class="text-6xl leading-none text-amarelo">adultos<sup class="text-4xl">5</sup></span>
+                                </h4>
+                            </div>
+                            <p class="text-white text-lg">Geralmente, a doença se manifesta na fase adulta em dois picos:</p>
+                            <ul class="list-disc list-inside text-white text-lg">
+                                <li>Início dos sintomas na faixa dos 30/40 anos, com discreto predomínio em mulheres;</li>
+                                <li>E na faixa dos 50/60 anos para ambos os sexos.<sup>5</sup></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-center gap-10 mt-14">
+                    <div class="w-full">
+                        <h3 class="text-amarelo text-3xl leading-tight mb-6">Como a Miastenia Gravis age?</h3>
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-start gap-10 mt-8">
+                    <div class="w-1/3 relative">
+                        <div class="flex flex-col items-start gap-4 relative z-10">
+                            <div class="frame-icon frame-icon-rosa-50">
+                                <div class="frame-icon-content-icon">
+                                    <img src="src/icons/nervo.svg" class="svg-inline">
+                                </div>
+                                <div class="frame-icon-base">
+                                    <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                </div>
+                            </div>
+                            <p class="text-white text-lg">Nosso corpo precisa de uma boa comunicação entre os nervos e os músculos para funcionar direitinho e quem faz esse papel de mensageiro é a acetilcolina, um neurotransmissor essencial nessa conversa.<sup>6</sup></p>
+                        </div>
+
+                        <div class="absolute top-12 left-12 -right-12 z-0">
+                            <img src="src/img/line-conect-1.svg" alt="Linha de conexão" class="w-full h-2 object-cover">
+                        </div>
+                    </div>
+
+                    <div class="w-1/3 relative">
+                        <div class="flex flex-col items-start gap-4 relative z-10">
+                            <div class="frame-icon frame-icon-rosa-50">
+                                <div class="frame-icon-content-icon">
+                                    <img src="src/icons/fraqueza.svg" class="svg-inline">
+                                </div>
+                                <div class="frame-icon-base">
+                                    <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                </div>
+                            </div>
+                            <p class="text-white text-lg">Na Miastenia Gravis, o organismo acaba produzindo anticorpos que atacam justamente os receptores de acetilcolina, dificultando essa comunicação. Isso atrapalha a contração dos músculos e causa os principais sintomas da doença: fraqueza e cansaço.<sup>6</sup></p>
+                        </div>
+
+                        <div class="absolute top-12 left-12 -right-12 z-0">
+                            <img src="src/img/line-conect-1.svg" alt="Linha de conexão" class="w-full h-2 object-cover">
+                        </div>
+                    </div>
+
+                    <div class="w-1/3">
+                        <div class="flex flex-col items-start gap-4">
+                            <div class="frame-icon frame-icon-rosa-50">
+                                <div class="frame-icon-content-icon">
+                                    <img src="src/icons/anticorpo.svg" class="svg-inline">
+                                </div>
+                                <div class="frame-icon-base">
+                                    <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                </div>
+                            </div>
+                            <p class="text-white text-lg">Anticorpos são moléculas que o corpo fabrica para se defender de vírus e bactérias. Mas em doenças autoimunes, como a Miastenia Gravis, o sistema de defesa se confunde e passa a atacar partes saudáveis do próprio corpo — esses são os chamados autoanticorpos.<sup>3,6</sup></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="js-junctions-group">
+                    <div class="w-full bg-rosa-700 rounded-3xl mt-14 px-4 pt-8 pb-4 relative z-10">
+                    <div class="flex flex-row items-stretch gap-4">
+                        <div class="w-1/2 flex flex-col items-center">
+                            <h4 class="text-amarelo text-2xl leading-tight mb-4 text-center">Junção neuromuscular na Miastenia Gravis</h4>
+                            <div class="flex flex-row items-center gap-6 bg-rosa-800 rounded-2xl overflow-hidden w-full h-full p-6">
+                                <img src="src/img/como-ocorre-1.webp" alt="Junção neuromuscular normal" class="w-1/3 rounded-2xl">
+                                <ul class="list-decimal list-inside text-white text-lg">
+                                    <li>Célula nervosa</li>
+                                    <li>Acetilcolina</li>
+                                    <li>Receptores de acetilcolina</li>
+                                    <li>Sinal</li>
+                                    <li>Músculo</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="w-1/2 flex flex-col items-center">
+                            <h4 class="text-amarelo text-2xl leading-tight mb-4 text-center">Junção neuromuscular na Miastenia Gravis</h4>
+                            <div class="flex flex-row items-center gap-6 bg-rosa-800 rounded-2xl overflow-hidden w-full h-full p-6">
+                                <img src="src/img/como-ocorre-2.webp" alt="Junção neuromuscular normal" class="w-1/3 rounded-2xl">
+                                <ul class="list-decimal list-inside text-white text-lg">
+                                    <li>Célula nervosa</li>
+                                    <li>Acetilcolina</li>
+                                    <li>Anticorpos prejudicando a ligação</li>
+                                    <li>Receptores de acetilcolina e Contração muscular reduzida</li>
+                                    <li>Músculo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="bg-rosa-800 rounded-3xl px-6 pt-14 pb-4 -mt-10 relative z-0">
+                        <p class="text-white text-sm">Adaptado de: International Centre of Thoracic Surgery.<sup>7</sup></p>
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-center gap-10 mt-14">
+                    <div class="w-full">
+                        <h3 class="text-amarelo text-3xl leading-tight mb-6">Tipos de Miastenia</h3>
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-start gap-10 mt-8">
+                    <div class="w-1/2">
+                        <div class="flex flex-row items-start gap-6">
+                            <div class="frame-icon frame-icon-rosa-50">
+                                <div class="frame-icon-content-icon">
+                                    <img src="src/icons/eyeball.svg" class="svg-inline">
+                                </div>
+                                <div class="frame-icon-base">
+                                    <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-start">
+                                <h4 class="text-amarelo text-2xl leading-tight mb-4 text-center">Miastenia Gravis ocular<sup>3</sup></h4>
+                                <p class="text-white text-lg">Nesse caso, só os músculos dos olhos são comprometidos, o que pode causar pálpebras caídas (de um ou dos dois lados), visão dupla ou embaçada.<sup>3</sup> Mesmo afetando apenas a região ocular, cerca de 50% dos casos apresentam autoanticorpos.<sup>3</sup></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/2">
+                        <div class="flex flex-row items-start gap-6">
+                            <div class="frame-icon frame-icon-rosa-50">
+                                <div class="frame-icon-content-icon">
+                                    <img src="src/icons/muscles.svg" class="svg-inline">
+                                </div>
+                                <div class="frame-icon-base">
+                                    <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-start">
+                                <h4 class="text-amarelo text-2xl leading-tight mb-4 text-center">Miastenia Gravis generalizada<sup>3</sup></h4>
+                                <p class="text-white text-lg">Nesse tipo de Miastenia, além dos músculos dos olhos (que podem causar pálpebras caídas e visão dupla), outros grupos musculares são afetados, como os que ajudam na fala, na deglutição, no movimento do pescoço e dos braços e pernas.<sup>3</sup> Na maioria dos casos, o corpo produz autoanticorpos, sendo o mais comum o anti-AChR, presente em cerca de 85% dos pacientes.<sup>3,5,6</sup></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sintomas-da-miastenia-gravis" class="symptoms-section">
+            <div class="symptoms-header">
+                <div class="symptoms-header-content">
+                    <div class="symptoms-title-wrapper">
+                        <h2 class="symptoms-title">Sintomas da Miastenia Gravis<sup>1-6</sup></h2>
+                        <p class="symptoms-subtitle">Não é preguiça. Não é falta de esforço. E não é só cansaço.</p>
+                        <p class="symptoms-description">Miastenia Gravis pode ser difícil de perceber. Por isso, muitas vezes, colegas de trabalho, amigos e até familiares não compreendem. Em meio a dias difíceis, pode surgir a sensação de estar só nesse barco.</p>
+                    </div>
+                </div>
+
+                <div class="iceberg-section-title">
+                    <div class="iceberg-title-wrapper">
+                        <h3 class="iceberg-title">O que as pessoas veem</h3>
+                    </div>
+                </div>
+
+                <div class="iceberg-container">
+                    <img src="src/img/topo-iceberg.svg" alt="O que as pessoas veem" class="iceberg-image">
+                    <div class="iceberg-overlay">
+                        <div class="iceberg-half iceberg-half-left">
+                            <div class="symptom-badge symptom-badge-left symptom-fraqueza">
+                                <span class="symptom-text">Fraqueza</span>
+                                <div class="frame-icon frame-icon-small">
+                                    <div class="frame-icon-content-icon">
+                                        <img src="src/icons/mental-health-05.svg" class="svg-inline">
+                                    </div>
+                                    <div class="frame-icon-base">
+                                        <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="symptom-badge symptom-badge-left symptom-mastigacao">
+                                <span class="symptom-text">Mastigação ou fala lenta</span>
+                                <div class="frame-icon frame-icon-small">
+                                    <div class="frame-icon-content-icon">
+                                        <img src="src/icons/voice-circle.svg" class="svg-inline">
+                                    </div>
+                                    <div class="frame-icon-base">
+                                        <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="iceberg-half iceberg-half-right">
+                            <div class="symptom-badge symptom-badge-right symptom-cansaco">
+                                <div class="frame-icon frame-icon-small">
+                                    <div class="frame-icon-content-icon">
+                                        <img src="src/icons/mental-health-23.svg" class="svg-inline">
+                                    </div>
+                                    <div class="frame-icon-base">
+                                        <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                    </div>
+                                </div>
+                                <span class="symptom-text">Cansaço</span>
+                            </div>
+
+                            <div class="symptom-badge symptom-badge-right symptom-olhos-caidos">
+                                <div class="frame-icon frame-icon-small">
+                                    <div class="frame-icon-content-icon">
+                                        <img src="src/icons/olhos-caidos.svg" class="svg-inline">
+                                    </div>
+                                    <div class="frame-icon-base">
+                                        <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                    </div>
+                                </div>
+                                <span class="symptom-text">Olhos caídos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="iceberg-base">
+                <div class="symptoms-header">
+                    <div class="iceberg-container">
+                        <img src="src/img/base-iceberg.svg" alt="O que as pessoas veem" class="iceberg-image">
+                        <div class="iceberg-base-title-wrapper">
+                            <h3 class="iceberg-title-white">O que os pacientes sentem</h3>
+                        </div>
+                        <div class="iceberg-overlay">
+                            <div class="iceberg-half iceberg-half-left">
+                                <div class="symptom-badge symptom-badge-left symptom-visao-dupla">
+                                    <span class="symptom-text">Visão dupla</span>
+                                    <div class="frame-icon frame-icon-small">
+                                        <div class="frame-icon-content-icon">
+                                            <img src="src/icons/dupla-visao.svg" class="svg-inline">
+                                        </div>
+                                        <div class="frame-icon-base">
+                                            <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="symptom-badge symptom-badge-left symptom-fala-dificil">
+                                    <span class="symptom-text">Dificuldade para falar</span>
+                                    <div class="frame-icon frame-icon-small">
+                                        <div class="frame-icon-content-icon">
+                                            <img src="src/icons/bubbles-2.svg" class="svg-inline">
+                                        </div>
+                                        <div class="frame-icon-base">
+                                            <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="symptom-badge symptom-badge-left symptom-crise">
+                                    <span class="symptom-text">Crise miastênica</span>
+                                    <div class="frame-icon frame-icon-small">
+                                        <div class="frame-icon-content-icon">
+                                            <img src="src/icons/mental-health-25.svg" class="svg-inline">
+                                        </div>
+                                        <div class="frame-icon-base">
+                                            <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="symptom-badge symptom-badge-left symptom-flutuantes">
+                                    <span class="symptom-text">Sintomas flutuantes (vêm e vão)</span>
+                                    <div class="frame-icon frame-icon-small">
+                                        <div class="frame-icon-content-icon">
+                                            <img src="src/icons/mental-health-06.svg" class="svg-inline">
+                                        </div>
+                                        <div class="frame-icon-base">
+                                            <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="iceberg-half iceberg-half-right">
+                                <div class="symptom-badge symptom-badge-right symptom-invisibilidade">
+                                    <div class="frame-icon frame-icon-small">
+                                        <div class="frame-icon-content-icon">
+                                            <img src="src/icons/mental-health-01.svg" class="svg-inline">
+                                        </div>
+                                        <div class="frame-icon-base">
+                                            <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                        </div>
+                                    </div>
+                                    <span class="symptom-text">Invisibilidade</span>
+                                </div>
+    
+                                <div class="symptom-badge symptom-badge-right symptom-cotidiano">
+                                    <div class="frame-icon frame-icon-small">
+                                        <div class="frame-icon-content-icon">
+                                            <img src="src/icons/mental-health-21.svg" class="svg-inline">
+                                        </div>
+                                        <div class="frame-icon-base">
+                                            <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                        </div>
+                                    </div>
+                                    <span class="symptom-text">Cotidiano desafiador</span>
+                                </div>
+    
+                                <div class="symptom-badge symptom-badge-right symptom-estigmas">
+                                    <div class="frame-icon frame-icon-small">
+                                        <div class="frame-icon-content-icon">
+                                            <img src="src/icons/mental-health-27.svg" class="svg-inline">
+                                        </div>
+                                        <div class="frame-icon-base">
+                                            <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                        </div>
+                                    </div>
+                                    <span class="symptom-text">Estigmas e incompreensão</span>
+                                </div>
+    
+                                <div class="symptom-badge symptom-badge-right symptom-imprevisibilidade">
+                                    <div class="frame-icon frame-icon-small">
+                                        <div class="frame-icon-content-icon">
+                                            <img src="src/icons/mental-health-19.svg" class="svg-inline">
+                                        </div>
+                                        <div class="frame-icon-base">
+                                            <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                        </div>
+                                    </div>
+                                    <span class="symptom-text">Imprevisibilidade das crises</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-cards-container">
+                        <div class="info-card">
+                            <div class="statistics-card">
+                                <h4 class="statistics-title">
+                                    <div>
+                                        <span class="statistics-number-line">Quase </span>
+                                        <span class="statistics-number">90%</span>
+                                        <span class="statistics-number-line"> dos pacientes </span>
+                                    </div>
+                                    <span class="statistics-subtitle">de Miastenia Gravis apresentam alguma comorbidade<sup>9</sup></span>
+                                </h4>
+                                <p class="statistics-description">Há um risco aumentado de outras condições autoimunes como:</p>
+                                <ul class="statistics-list">
+                                    <li class="statistics-list-item">
+                                        <img src="src/icons/arrow-circle-down.svg" alt="Ícone de seta para baixo" class="svg-inline statistics-list-icon">
+                                        <span>Doenças da tireoide</span>
+                                    </li>
+                                    <li class="statistics-list-item">
+                                        <img src="src/icons/arrow-circle-down.svg" alt="Ícone de seta para baixo" class="svg-inline statistics-list-icon">
+                                        <span>Lúpus eritematoso sistêmico</span>
+                                    </li>
+                                    <li class="statistics-list-item">
+                                        <img src="src/icons/arrow-circle-down.svg" alt="Ícone de seta para baixo" class="svg-inline statistics-list-icon">
+                                        <span>Artrite reumatoide<sup>9</sup></span>
+                                    </li>
+                                </ul>
+                                <p class="statistics-final-text">Aumenta também a propensão a doenças como as cardiovasculares, hipertensão, diabetes, anemia, entre outras.<sup>9</sup></p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="attention-card-header">
+                                <div class="frame-icon frame-icon-big frame-icon-azul-50">
+                                    <div class="frame-icon-content-icon">
+                                        <img src="src/icons/information.svg" class="svg-inline">
+                                    </div>
+                                    <div class="frame-icon-base">
+                                        <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                    </div>
+                                </div>
+                                <h4 class="attention-card-title">Atenção para os sintomas de Miastenia Gravis</h4>    
+                            </div>
+                            <p class="attention-card-text">Pálpebras caídas, visão dupla e fraqueza podem ser alguns dos sintomas iniciais de Miastenia Gravis.<sup>3</sup></p>
+                            <p class="attention-card-text-final">Se perceber um ou mais deles, procure um neurologista — se possível, um neuromuscular. Ele poderá investigar, solicitar o exame de sangue para a dosagem de anticorpo anti-receptor de acetilcolina (anti-AChR) e indicar o melhor caminho para o tratamento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="diagnostico-de-miastenia-gravis" class="pt-20">
+            <div class="container">
+                <div class="flex flex-row items-stretch gap-6 mb-6">
+                    <div class="w-full max-w-[428px]">
+                        <div class="bg-azul-100 rounded-3xl p-10">
+                            <h2 class="text-azul-principal text-4xl leading-tight mb-4">Diagnóstico de Miastenia Gravis </h2>
+                            <p class="text-lg">Chegar ao diagnóstico da doença pode ser uma longa jornada de consultas a vários especialistas. A especialidade médica mais indicada para diagnosticar a Miastenia Gravis é o neurologista com experiência em doenças neuromusculares, que costuma solicitar exames como a dosagem de anticorpos anti-AChR (por exame de sangue) e a eletroneuromiografia.<sup>2,3</sup></p>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-auto overflow-hidden rounded-3xl relative">
+                        <img src="src/img/ilustra-kv-diagnostico.webp" alt="Ilustração de um médico e um paciente" class="absolute top-0 left-0 w-full h-full object-cover object-center">
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-stretch gap-6">
+                    <div class="w-1/2">
+                        <div class="flex flex-row items-start gap-6 bg-azul-principal rounded-3xl p-8 h-full">
+                            <div class="frame-icon frame-icon-azul-50">
+                                <div class="frame-icon-content-icon">
+                                    <img src="src/icons/percentage-circle.svg" class="svg-inline">
+                                </div>
+                                <div class="frame-icon-base">
+                                    <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-start">
+                                <p class="text-white text-lg mb-4">Diferentes anticorpos podem estar envolvidos na Miastenia Gravis generalizada, como anti-LPR4*, anti-MuSK** e anti-AChR***.<sup>3</sup></p>
+                                <p class="text-white text-lg">O mais frequentemente encontrado é o anti-AChR, presente em cerca de <strong>80% dos casos.</strong><sup>6</sup></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/2">
+                        <div class="flex flex-row items-start gap-6 bg-azul-principal rounded-3xl p-8 h-full">
+                            <div class="frame-icon frame-icon-azul-50">
+                                <div class="frame-icon-content-icon">
+                                    <img src="src/icons/microscope.svg" class="svg-inline">
+                                </div>
+                                <div class="frame-icon-base">
+                                    <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-start">
+                                <p class="text-white text-lg mb-4">Os exames de anticorpos são muito importantes para definir o melhor caminho para o tratamento, mas vale lembrar: mesmo sem a presença desses anticorpos, o diagnóstico de Miastenia Gravis ainda pode ser considerado.<sup>2,3</sup></p>
+                                <p class="text-white text-lg">Quando o resultado não é conclusivo, o passo seguinte costuma ser a eletroneuromiografia ou a eletromiografia de fibra única. Também pode ser solicitado o exame de outros anticorpos menos comuns, como o anti-MuSK e o anti-LRP4, quando disponíveis.<sup>2,3</sup></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tratamento-para-a-miastenia-gravis" class="py-20">
+            <div class="container">
+                <div class="flex flex-col items-center w-full">
+                    <h2 class="text-azul-principal text-4xl leading-tight mb-4 text-center">Tratamento para a Miastenia Gravis</h2>
+                    <p class="text-lg text-center mb-10">O tratamento adequado permite ao paciente avistar novos horizontes e retomar rotas e planos. Ou seja:</p>
+                    <div class="flex flex-row items-strecth w-full gap-6">
+                        <div class="w-1/2">
+                            <div class="bg-[url('/src/img/bg-hero.webp')] bg-cover bg-center bg-no-repeat h-full w-full p-10 rounded-3xl min-h-[420px] relative overflow-hidden">
+                                <div class="absolute bottom-0 left-0 w-full h-[250px] bg-gradient-to-b from-transparent to-azul-principal/90 z-0"></div>
+                                <div class="flex flex-col items-start justify-end h-full w-full relative z-10">
+                                    <p class="text-xl text-white font-display font-bold">Devolve a autonomia e qualidade de vida, com sintomas mínimos.<sup>2,3,6,12</sup></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-1/2">
+                            <div class="bg-[url('/src/img/ilustra-kv-3.webp')] bg-cover bg-center bg-no-repeat h-full w-full p-10 rounded-3xl min-h-[420px] relative overflow-hidden">
+                                <div class="absolute bottom-0 left-0 w-full h-[250px] bg-gradient-to-b from-transparent to-azul-principal/90 z-0"></div>
+                                <div class="flex flex-col items-start justify-end h-full w-full relative z-10">
+                                    <p class="text-xl text-white font-display font-bold">Aquilo que parecia quase impossível — escovar os dentes, pentear o cabelo, subir escadas, falar, engolir ou até abrir os olhos — pode deixar de ser tão desafiador assim.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-center w-full mt-6">
+                    <div class="bg-azul-principal rounded-3xl p-6 flex flex-row items-center gap-6">
+                        <div class="frame-icon frame-icon-small frame-icon-azul-50">
+                            <div class="frame-icon-content-icon">
+                                <img src="src/icons/note-2.svg" class="svg-inline">
+                            </div>
+                            <div class="frame-icon-base">
+                                <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                            </div>
+                        </div>
+                        <p class="text-white text-xl"><strong>Registrar os sintomas no dia a dia e fazer o acompanhamento com um neurologista</strong> são passos importantes para manter o tratamento alinhado com as necessidades de cada fase.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-center w-full mt-14 gap-10">
+                    <div class="w-full max-w-[400px]">
+                        <div class="bg-azul-principal p-8 rounded-3xl">
+                            <div class="frame-icon frame-icon-azul-50 mb-6">
+                                <div class="frame-icon-content-icon">
+                                    <img src="src/icons/percentage-circle.svg" class="svg-inline">
+                                </div>
+                                <div class="frame-icon-base">
+                                    <img src="src/img/shape-base-icon.svg" class="svg-inline">
+                                </div>
+                            </div>
+                            <h4 class="mb-4">
+                                <div>
+                                    <span class="text-2xl text-amarelo">Até </span>
+                                    <span class="text-6xl leading-none text-amarelo">20%</span>
+                                    <span class="text-2xl text-amarelo"> dos pacientes </span>
+                                </div>
+                                <span class="text-white text-2xl">não respondem bem ao tratamento inicial ou não são compatíveis.<sup>2,3,6</sup></span>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="w-full">
+                        <h4 class="text-azul-principal text-3xl leading-tight mb-6">Abordagem</h4>
+                        <p class="text-lg mb-4">A abordagem pode variar de acordo com os sintomas apresentados, a gravidade do quadro e o tipo de anticorpo envolvido.<sup>2,3,6,10</sup> O acompanhamento ao longo do tempo costuma ser feito por um neurologista ou, preferencialmente, por um neurologista especializado em doenças neuromusculares.<sup>2,3,6</sup></p>
+                        <p class="text-lg mb-4">O tratamento também muda conforme a fase da doença. Pode ser diferente em momentos de crise miastênica – quando há dificuldade de respirar, o que configura uma emergência médica – e na fase de manutenção, quando o foco é manter a estabilidade.<sup>2,3,6</sup></p>
+                        <p class="text-lg">Se, mesmo com tratamento, ainda há dificuldade para engolir e falar, além da perda de autonomia para dirigir, trabalhar ou realizar atividades básicas, é sinal de que a Miastenia Gravis pode não estar bem controlada.<sup>11</sup> Nesses casos, é fundamental entrar em contato com o neurologista.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="como-e-a-vida-com-miastenia" class="py-20 bg-rosa-principal rounded-t-[80px]">
+            <div class="container">
+                <div class="w-full">
+                    <div class="flex flex-col items-center w-full mb-8">
+                        <h2 class="text-amarelo text-4xl leading-tight mb-4 text-center">Como é a vida com Miastenia?</h2>
+                        <p class="text-white text-lg text-center">Conheça a história da Rita, personagem desta animação leve e didática.</p>
+                    </div>
+                    <div class="w-full max-w-4xl mx-auto mb-8">
+                        <div class="aspect-video bg-rosa-700 rounded-3xl overflow-hidden shadow-lg shadow-rosa-700/20">
+                            <iframe 
+                                class="w-full h-full"
+                                src="https://www.youtube.com/embed/67MXay-B9VU"
+                                title="Como é a vida com Miastenia?"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="inline-flex flex-row items-center justify-center bg-rosa-50 rounded-full py-4 px-8 gap-4">
+                            <p class="text-rosa-principal text-lg text-center font-display font-bold">Quer saber mais sobre a vida da Rita? Veja a história em quadrinhos:</p>
+                            <a href="https://www.programafazbem.com.br/historia-miastenia" target="_blank" class="btn btn-rosa-principal">
+                                <span class="text">Leia agora</span>
+                                <span class="icon"><img src="src/icons/arrow-circle-down.svg" class="svg-inline -rotate-90"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="viver-e-raro" class="py-20 bg-rosa-700 rounded-b-[80px]">
+            <div class="container">
+                <div class="w-full flex flex-row items-center gap-10">
+                    <div class="flex flex-col items-start w-1/2">
+                        <h2 class="text-amarelo text-4xl leading-tight mb-4">Viver é Raro, uma série da GloboPlay</h2>
+                        <p class="text-white text-lg">A série Viver é Raro apresenta Déa Desiré, uma psicóloga diagnosticada com Miastenia Gravis generalizada aos 45 anos. Sua trajetória mostra os desafios enfrentados e suas novas perspectivas de vida.</p>
+                        <a href="https://globoplay.globo.com/v/12794983/?s=0s" target="_blank" class="btn btn-rosa-50 mt-6">
+                            <span class="text">Assistir agora</span>
+                            <span class="icon"><img src="src/icons/play.svg" class="svg-inline"></span>
+                        </a>
+                    </div>
+                    <div class="w-1/2 max-w-4xl mx-auto">
+                        <div class="aspect-video bg-rosa-700 rounded-3xl overflow-hidden shadow-lg shadow-rosa-700/20 relative">
+                            <img 
+                                src="src/img/viver-e-raro-thumb.webp" 
+                                alt="Thumbnail da série Viver é Raro"
+                                class="w-full h-full object-cover"
+                            />
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <a href="https://globoplay.globo.com/v/12794983/?s=0s" target="_blank" class="btn btn-icon btn-icon-big btn-rosa-principal">
+                                    <span class="icon"><img src="src/icons/play.svg" class="svg-inline"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quando-estamos-juntos-a-tempestade-passa" class="py-20">
+            <div class="container">
+                <div class="flex flex-row items-center w-full">
+                    <div class="w-full bg-azul-100 p-10 rounded-3xl">
+                        <h2 class="text-azul-principal text-4xl leading-tight mb-4">Quando estamos juntos a tempestade passa mais rápido – e a vida volta.</h2>
+                        <p class="text-lg">Conheça as associações que oferecem suporte aos pacientes e seus familiares. Clique nas imagens ao lado e saiba mais:</p>
+                        <div class="grid grid-cols-4 gap-6 mt-8">
+                            <a href="https://www.abrami.org.br/old/" target="_blank" class="bg-white rounded-2xl p-6 flex items-center justify-center hover:shadow-lg shadow-azul-principal/20 transition-shadow duration-300 h-36">
+                                <img src="src/img/logo-abrami.webp" alt="Abrami" class="max-w-full max-h-full object-contain">
+                            </a>
+                            <a href="https://www.afagbrasil.org.br/" target="_blank" class="bg-white rounded-2xl p-6 flex items-center justify-center hover:shadow-lg shadow-azul-principal/20 transition-shadow duration-300 h-36">
+                                <img src="src/img/logo-afag.webp" alt="AFAG" class="max-w-full max-h-full object-contain">
+                            </a>
+                            <a href="https://www.casahunter.org.br/" target="_blank" class="bg-white rounded-2xl p-6 flex items-center justify-center hover:shadow-lg shadow-azul-900/20 transition-shadow duration-300 h-36">
+                                <img src="src/img/logo-casahunter.webp" alt="Casa Hunter" class="max-w-full max-h-full object-contain">
+                            </a>
+                            <a href="https://www.instagram.com/ammi_associacao/" target="_blank" class="bg-white rounded-2xl p-6 flex items-center justify-center hover:shadow-lg shadow-azul-principal/20 transition-shadow duration-300 h-36">
+                                <img src="src/img/logo-AMMI.webp" alt="AMMI" class="max-w-full max-h-full object-contain">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pb-10">
+        <div class="container">
+            <div class="flex flex-row items-center w-full">
+                <div class="w-full">
+                    <p class="text-sm">Referências: 1. Cunha, F. M., Scola, R. H. & Werneck, L. C. [Myasthenia gravis. Historical aspects]. Arq. Neuropsiquiatr. 57, 531–536 (1999). 2. BRASIL, Ministério da Saúde. MIASTENIA GRAVIS. PORTARIA CONJUNTA SAES/SCTIE/MS Nº11, DE 23 DE MAIO DE 2022. Acesso em 26/04/2024. Disponível em: http://antigo-conitec.saude.gov.br/images/Protocolos/Resumidos/20220705_PCDT_Resumido_MIastenia_Gravis_final.pdf. 3. Suresh, A. B. & Asuncion, R. M. D. Myasthenia Gravis. (StatPearls Publishing, 2023). 4. Abicht, A., Müller, J. S. & Lochmüller, H. Congenital Myasthenic Syndromes Overview. (University of Washington, Seattle, 2021). 5. Salari, N. et al. Global prevalence of myasthenia gravis and the effectiveness of common drugs in its treatment: a systematic review and meta-analysis. J. Transl. Med. 19, 516 (2021). 6. Gilhus, N. E. et al. Myasthenia gravis. Nat Rev Dis Primers 5, 30 (2019).  7. International Centre of Thoracic Surgery. Myasthenia Gravis. Disponível em: https://www.icts.com.sg/myasthenia-gravis/. Acessado em 29 de maio de 2025. 8. Marbin, D., Piper, S. K., Lehnerer, S., Harms, U. & Meisel, A. Mental health in myasthenia gravis patients and its impact on caregiver burden. Sci. Rep. 12, 19275 (2022). 9. Misra, U. K., Kalita, J., Singh, V. K. & Kumar, S. A study of comorbidities in myasthenia gravis. Acta Neurol. Belg. 120, 59–64 (2020). 10. Mukharesh L, Kaminski HJ. A Neurologist's Perspective on Understanding Myasthenia Gravis: Clinical Perspectives of Etiologic Factors, Diagnosis, and Preoperative Treatment. Thorac Surg Clin. 2019 May;29(2):133-141. 11. Law, N., Davio, K., Blunck, M., Lobban, D. & Seddik, K. The Lived Experience of Myasthenia Gravis: A Patient-Led Analysis. Neurol Ther 10, 1103–1125 (2021). 12. Uzawa A, Ozawa Y, Yasuda M, Onishi Y, Akamine H, Kuwabara S. Minimal symptom expression achievement over time in generalized myasthenia gravis. Acta Neurol Belg. 2023 Jun;123(3):979-982.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-row items-center w-full mt-20">
+                <div class="w-full border border-azul-200 rounded-3xl">
+                    <div class="p-20 flex items-center justify-center">
+                        <img src="src/img/logo-az.png" alt="Logo da AstraZeneca" class="max-w-full h-14">
+                    </div>
+
+                    <div class="px-10 py-6 flex flex-row items-center justify-between gap-10 border-t border-azul-200">
+                        <p class="text-sm">Copyright © 2025. Todos os direitos reservados.</p>
+                        <p class="text-sm">BR-41001 Conteúdo destinado a todos os públicos. Agosto, 2025.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/theme.js"></script>
+    <!-- Bibliotecas GSAP devem carregar antes das animações -->
+    <script src="src/js/gsap.min.js"></script>
+    <script src="src/js/ScrollTrigger.min.js"></script>
+    <script src="src/js/SplitText.min.js"></script>
+    <script src="src/js/TextPlugin.min.js"></script>
+    <!-- Animações do site -->
+    <script src="src/js/animation.js"></script>
+    <script src="src/js/svg-inline.js"></script>
+</body>
+
+</html>

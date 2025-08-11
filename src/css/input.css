@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('../fonts/VAGRoundedNext.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply 
+        scroll-smooth antialiased
+    }
+
+    body {
+        @apply 
+        font-body 
+        text-neutro text-base
+        leading-normal
+        bg-azul-50
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply 
+        font-display font-bold
+    }
+}
+
+@layer components {
+    /* Botões */
+    
+    .btn {
+        @apply
+        inline-flex items-center justify-center
+        py-4 px-8 gap-3
+        rounded-full bg-azul-principal  
+        text-azul-50 font-semibold font-display text-lg
+        transition-all duration-300
+
+        hover:bg-azul-900
+    }
+
+    .btn-icon svg {
+        @apply
+        w-6 h-6 min-w-6 min-h-6
+    }
+
+    .btn .icon svg path {
+        @apply
+        fill-azul-50
+    }
+
+    .btn-azul-50 {
+        @apply
+        bg-azul-50
+        text-azul-principal
+
+        hover:bg-azul-100
+    }
+
+    .btn-azul-50 .icon svg path {
+        @apply
+        fill-azul-principal
+    }
+
+    .btn-rosa-principal {
+        @apply
+        bg-rosa-principal
+        text-rosa-50
+
+        hover:bg-rosa-700
+    }
+
+    .btn-rosa-principal .icon svg path {
+        @apply
+        fill-rosa-50
+    }
+
+    .btn-rosa-50 {
+        @apply
+        bg-rosa-50
+        text-rosa-principal
+
+        hover:bg-rosa-100
+    }
+
+    .btn-rosa-50 .icon svg path {
+        @apply
+        fill-rosa-principal
+    }
+
+    .btn-icon {
+        @apply
+        p-4
+    }
+
+    .btn-icon.btn-icon-big svg {
+        @apply
+        w-12 h-12 min-w-12 min-h-12
+    }
+
+    /* Frame Icon */
+
+    .frame-icon {
+        @apply
+        w-24 h-24 min-h-24 min-w-24
+        relative
+    }
+
+    .frame-icon-content-icon {
+        @apply
+        absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10
+        w-12 h-12 min-w-12 min-h-12
+    }
+
+    .frame-icon-content-icon svg {
+        @apply
+        w-full h-full
+    }
+
+    .frame-icon-content-icon svg path {
+        @apply
+        fill-azul-50
+    }
+
+    .frame-icon-base {
+        @apply
+        absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+        w-24 h-24 min-h-24 min-w-24
+    }
+
+    .frame-icon-base svg {
+        @apply
+        w-full h-full
+    }
+
+    .frame-icon-base svg path {
+        @apply
+        fill-azul-principal
+    }
+
+    .frame-icon-big {
+        @apply
+        w-32 h-32 min-h-32 min-w-32
+    }
+
+    .frame-icon-big .frame-icon-content-icon {
+        @apply
+        w-16 h-16 min-w-16 min-h-16
+    }
+
+    .frame-icon-big .frame-icon-base {
+        @apply
+        w-32 h-32 min-h-32 min-w-32
+    }
+
+    .frame-icon-small {
+        @apply
+        w-16 h-16 min-h-16 min-w-16
+    }
+
+    .frame-icon-small .frame-icon-content-icon {
+        @apply
+        w-8 h-8 min-w-8 min-h-8
+    }
+
+    .frame-icon-small .frame-icon-base {
+        @apply
+        w-16 h-16 min-h-16 min-w-16
+    }
+
+    .frame-icon-rosa-50 .frame-icon-base svg path {
+        @apply
+        fill-rosa-50
+    }
+
+    .frame-icon-rosa-50 .frame-icon-content-icon svg path {
+        @apply
+        fill-rosa-principal
+    }
+
+    .frame-icon-azul-50 .frame-icon-base svg path {
+        @apply
+        fill-azul-50
+    }
+
+    .frame-icon-azul-50 .frame-icon-content-icon svg path {
+        @apply
+        fill-azul-principal
+    }
+
+    /* Seção Sintomas - Miastenia Gravis */
+    
+    .symptoms-section {
+        @apply
+        pt-20
+    }
+
+    .symptoms-header {
+        @apply
+        container
+    }
+
+    .symptoms-header-content {
+        @apply
+        flex flex-row items-center justify-center
+    }
+
+    .symptoms-title-wrapper {
+        @apply
+        w-full max-w-[840px] text-center
+    }
+
+    .symptoms-title {
+        @apply
+        text-azul-principal text-4xl leading-tight mb-6
+    }
+
+    .symptoms-subtitle {
+        @apply
+        text-lg font-bold mb-4
+    }
+
+    .symptoms-description {
+        @apply
+        text-lg
+    }
+
+    .iceberg-section-title {
+        @apply
+        flex flex-row items-center justify-center
+    }
+
+    .iceberg-title-wrapper {
+        @apply
+        w-full text-center
+    }
+
+    .iceberg-title {
+        @apply
+        text-azul-principal text-3xl leading-tight py-10
+    }
+
+    .iceberg-title-white {
+        @apply
+        text-azul-50 text-3xl leading-tight
+    }
+
+    .iceberg-container {
+        @apply
+        flex flex-row items-center justify-center relative w-full h-full
+    }
+
+    .iceberg-image {
+        @apply
+        w-full h-auto max-w-[596px]
+    }
+
+    .iceberg-overlay {
+        @apply
+        absolute top-0 left-0 w-full h-full flex flex-row items-stretch justify-center
+    }
+
+    .iceberg-half {
+        @apply
+        w-1/2 h-full flex flex-col relative
+    }
+
+    .iceberg-half-left {
+        @apply
+        items-end
+    }
+
+    .iceberg-half-right {
+        @apply
+        items-start
+    }
+
+    .symptom-badge {
+        @apply
+        inline-flex items-center gap-4 p-1 rounded-full bg-azul-50 border border-azul-400 absolute
+    }
+
+    .symptom-badge-left {
+        @apply
+        pl-6
+    }
+
+    .symptom-badge-right {
+        @apply
+        pr-6
+    }
+
+    .symptom-text {
+        @apply
+        text-azul-principal text-xl font-semibold font-display text-center
+    }
+
+    /* Posicionamento específico dos badges - topo do iceberg */
+    .symptom-fraqueza {
+        @apply
+        top-[22%] right-[8%]
+    }
+
+    .symptom-mastigacao {
+        @apply
+        bottom-[10%] right-[20%]
+    }
+
+    .symptom-cansaco {
+        @apply
+        top-[0%] left-[10%]
+    }
+
+    .symptom-olhos-caidos {
+        @apply
+        bottom-[20%] left-[20%]
+    }
+
+    /* Base do iceberg - fundo azul */
+    .iceberg-base {
+        @apply
+        bg-azul-200 pb-20
+    }
+
+    .iceberg-base-title-wrapper {
+        @apply
+        w-full text-center absolute top-10 left-1/2 -translate-x-1/2
+    }
+
+    /* Posicionamento específico dos badges - base do iceberg */
+    .symptom-visao-dupla {
+        @apply
+        top-[20%] right-[28%]
+    }
+
+    .symptom-invisibilidade {
+        @apply
+        top-[16%] left-[32%]
+    }
+
+    .symptom-fala-dificil {
+        @apply
+        top-[44%] right-[17%]
+    }
+
+    .symptom-cotidiano {
+        @apply
+        top-[36%] left-[22%]
+    }
+
+    .symptom-crise {
+        @apply
+        top-[68%] right-[15%]
+    }
+
+    .symptom-estigmas {
+        @apply
+        top-[56%] left-[18%]
+    }
+
+    .symptom-flutuantes {
+        @apply
+        top-[92%] right-0
+    }
+
+    .symptom-imprevisibilidade {
+        @apply
+        top-[76%] left-[8%]
+    }
+
+    /* Cards informativos */
+    .info-cards-container {
+        @apply
+        pt-24 flex flex-row items-center justify-center gap-10
+    }
+
+    .info-card {
+        @apply
+        w-1/2
+    }
+
+    .statistics-card {
+        @apply
+        bg-azul-principal p-10 rounded-3xl
+    }
+
+    .statistics-title {
+        @apply
+        mb-4
+    }
+
+    .statistics-number-line {
+        @apply
+        text-2xl text-amarelo
+    }
+
+    .statistics-number {
+        @apply
+        text-6xl text-amarelo
+    }
+
+    .statistics-subtitle {
+        @apply
+        text-white text-2xl
+    }
+
+    .statistics-description {
+        @apply
+        text-white text-lg mb-4
+    }
+
+    .statistics-list {
+        @apply
+        list-none text-white text-lg flex flex-col gap-2
+    }
+
+    .statistics-list-item {
+        @apply
+        flex flex-row items-center gap-2
+    }
+
+    .statistics-list-icon {
+        @apply
+        -rotate-90 *:fill-azul-50
+    }
+
+    .statistics-final-text {
+        @apply
+        text-white text-lg
+    }
+
+    .attention-card-header {
+        @apply
+        flex flex-row items-center gap-6 mb-4
+    }
+
+    .attention-card-title {
+        @apply
+        text-azul-principal text-3xl leading-tight
+    }
+
+    .attention-card-text {
+        @apply
+        text-lg mb-4
+    }
+
+    .attention-card-text-final {
+        @apply
+        text-lg
+    }
+
+    /* Menu da Landing Page */
+    .menu-panel {
+        @apply fixed inset-0 z-50 bg-azul-50/90 backdrop-blur-sm;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 250ms ease;
+    }
+
+    .menu-panel.is-open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .menu-inner {
+        @apply h-screen flex flex-col;
+    }
+
+    .menu-header {
+        @apply py-4 flex items-center justify-between;
+    }
+
+    .menu-title {
+        @apply text-2xl font-display font-bold;
+    }
+
+    .menu-list {
+        @apply pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 flex-1 overflow-y-auto;
+    }
+
+    .menu-item {
+        @apply w-full h-full p-8 rounded-2xl text-azul-principal font-display font-semibold border border-azul-200 bg-white/70;
+        @apply hover:bg-azul-100 hover:border-azul-200 transition-colors duration-200;
+        @apply flex flex-col items-start justify-center gap-3;
+    }
+
+    .menu-item-text {
+        @apply text-lg;
+    }
+}
