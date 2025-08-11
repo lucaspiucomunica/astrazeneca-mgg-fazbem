@@ -6,6 +6,8 @@ module.exports = {
   ],
   theme: {
     screens: {
+      'xxs': '340px', // Novo breakpoint ainda menor
+      'xs': '480px',  // Novo breakpoint menor que sm
       'sm': '640px',
       'ms': '704px',  // Novo breakpoint entre sm e md
       'md': '768px',
@@ -46,7 +48,10 @@ module.exports = {
       },
       container: {
         center: true,
-        padding: '1.5rem',
+        padding: {
+          DEFAULT: '1rem',
+          md: '1.5rem',
+        },
         screens: {
           DEFAULT: '100%',
           sm: '100%',

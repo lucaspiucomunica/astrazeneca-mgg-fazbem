@@ -268,14 +268,14 @@
     const bottomRow = section.querySelector('.diagnostico-bottom-row');
 
     // Topo: card informativo (esquerda) e card com ilustração (direita)
-    const topInfoCard = topRow ? topRow.querySelector('.bg-azul-100') : null;
-    const illustrationWrapper = topRow ? topRow.querySelector('.overflow-hidden.rounded-3xl.relative') : null;
+    const topInfoCard = topRow ? topRow.querySelector('.diagnostico-info-card') : null;
+    const illustrationWrapper = topRow ? topRow.querySelector('.diagnostico-image-container') : null;
     const illustrationImg = illustrationWrapper ? illustrationWrapper.querySelector('img') : null;
 
     // Base: dois cards azuis
     let bottomCards = [];
     if (bottomRow) {
-      bottomCards = Array.from(bottomRow.querySelectorAll('.bg-azul-principal'));
+      bottomCards = Array.from(bottomRow.querySelectorAll('.diagnostico-card'));
     }
 
     if (prefersReducedMotion) {
@@ -677,8 +677,7 @@
     if (window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 
     // Container da linha que compara as junções (wrapper agrupando cards e crédito)
-    const compareRow = section.querySelector('.js-junctions-group')
-      || section.querySelector('.w-full.bg-rosa-700.rounded-3xl.mt-14');
+    const compareRow = section.querySelector('.juncoes-neuromusculares-section');
     if (!compareRow) return;
 
     if (prefersReducedMotion) {
@@ -755,7 +754,7 @@
 
     // Linha dos dois cards logo após o título
     const cardsRow = section.querySelector('.tipos-cards-row');
-    if (!cardsRow || !(cardsRow.classList && cardsRow.classList.contains('flex'))) return;
+    if (!cardsRow) return;
 
     const leftCol = cardsRow.children && cardsRow.children.length > 0 ? cardsRow.children[0] : null;
     const rightCol = cardsRow.children && cardsRow.children.length > 1 ? cardsRow.children[1] : null;
@@ -836,8 +835,8 @@
     const abordagemRow = section.querySelector('.tratamento-abordagem-row');
     const abordagemLeftCol = abordagemRow && abordagemRow.children ? abordagemRow.children[0] : null;
     const abordagemRightCol = abordagemRow && abordagemRow.children && abordagemRow.children.length > 1 ? abordagemRow.children[1] : null;
-    const abordagemCard = abordagemLeftCol ? abordagemLeftCol.querySelector('.bg-azul-principal') : null;
-    const abordagemNumberSpan = abordagemCard ? abordagemCard.querySelector('.leading-none.text-amarelo') : null;
+    const abordagemCard = abordagemLeftCol ? abordagemLeftCol.querySelector('.left-card') : null;
+    const abordagemNumberSpan = abordagemCard ? abordagemCard.querySelector('.number-20') : null;
     const abordagemTitle = abordagemRightCol ? abordagemRightCol.querySelector('h4') : null;
     const abordagemParagraphs = abordagemRightCol ? abordagemRightCol.querySelectorAll('p') : [];
 
@@ -1292,15 +1291,15 @@
 
     // Colunas
     const row = section.querySelector('.viver-raro-content-row');
-    const leftCol = row && row.children && row.children.length > 0 ? row.children[0] : null;
-    const rightCol = row && row.children && row.children.length > 1 ? row.children[1] : null;
+    const leftCol = section.querySelector('.viver-raro-left-column');
+    const rightCol = section.querySelector('.viver-raro-right-column');
 
     const title = leftCol ? leftCol.querySelector('h2') : null;
     const paragraph = leftCol ? leftCol.querySelector('p') : null;
     const leftButton = leftCol ? leftCol.querySelector('a.btn') : null;
 
     const videoCard = rightCol ? rightCol.querySelector('.viver-raro-video-card') : null;
-    const playButton = rightCol ? rightCol.querySelector('.btn.btn-icon') : null;
+    const playButton = rightCol ? rightCol.querySelector('.viver-raro-video-overlay .btn.btn-icon') : null;
 
     if (prefersReducedMotion) {
       [title, paragraph, leftButton, videoCard, playButton].forEach((el) => el && gsap.set(el, { opacity: 1, y: 0, scale: 1 }));

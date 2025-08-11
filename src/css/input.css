@@ -36,9 +36,9 @@
     .btn {
         @apply
         inline-flex items-center justify-center
-        py-4 px-8 gap-3
+        sm:py-4 py-3 sm:px-8 px-6 sm:gap-3 gap-2
         rounded-full bg-azul-principal  
-        text-azul-50 font-semibold font-display text-lg
+        text-azul-50 font-semibold font-display sm:text-lg text-base
         transition-all duration-300
 
         hover:bg-azul-900
@@ -145,22 +145,22 @@
 
     .frame-icon-big {
         @apply
-        w-32 h-32 min-h-32 min-w-32
+        xs:w-32 xs:h-32 xs:min-h-32 xs:min-w-32 w-24 h-24 min-h-24 min-w-24
     }
 
     .frame-icon-big .frame-icon-content-icon {
         @apply
-        w-16 h-16 min-w-16 min-h-16
+        xs:w-16 xs:h-16 xs:min-h-16 xs:min-w-16 w-12 h-12 min-h-12 min-w-12
     }
 
     .frame-icon-big .frame-icon-base {
         @apply
-        w-32 h-32 min-h-32 min-w-32
+        xs:w-32 xs:h-32 xs:min-h-32 xs:min-w-32 w-24 h-24 min-h-24 min-w-24
     }
 
     .frame-icon-small {
         @apply
-        w-16 h-16 min-h-16 min-w-16
+        sm:w-16 sm:h-16 sm:min-h-16 sm:min-w-16 w-12 h-12 min-h-12 min-w-12
     }
 
     .frame-icon-small .frame-icon-content-icon {
@@ -170,7 +170,7 @@
 
     .frame-icon-small .frame-icon-base {
         @apply
-        w-16 h-16 min-h-16 min-w-16
+        sm:w-16 sm:h-16 sm:min-h-16 sm:min-w-16 w-12 h-12 min-h-12 min-w-12
     }
 
     .frame-icon-rosa-50 .frame-icon-base svg path {
@@ -242,12 +242,12 @@
 
     .iceberg-title {
         @apply
-        text-azul-principal ml:text-3xl text-2xl leading-tight py-10
+        text-azul-principal ml:text-3xl xxs:text-2xl text-xl leading-tight xxs:py-10 py-6
     }
 
     .iceberg-title-white {
         @apply
-        text-azul-50 ml:text-3xl text-2xl leading-tight
+        text-azul-50 ml:text-3xl xxs:text-2xl text-xl leading-tight
     }
 
     .iceberg-container {
@@ -282,22 +282,26 @@
 
     .symptom-badge {
         @apply
-        inline-flex items-center gap-4 ms:p-1 p-0.5 rounded-full bg-azul-50 border border-azul-400 absolute
+        inline-flex items-center gap-4 ms:p-1 xs:p-0.5 xxs:p-2 p-1 rounded-full bg-azul-50 border border-azul-400 absolute
+    }
+
+    .symptom-badge .frame-icon {
+        @apply xs:inline hidden
     }
 
     .symptom-badge-left {
         @apply
-        pl-6
+        xs:pl-6 xxs:pl-2 pl-1
     }
 
     .symptom-badge-right {
         @apply
-        pr-6
+        xs:pr-6 xxs:pr-2 pr-1
     }
 
     .symptom-text {
         @apply
-        text-azul-principal ml:text-xl ms:text-lg text-base font-semibold font-display text-center
+        text-azul-principal ml:text-xl ms:text-lg sm:text-base xxs:text-sm text-xs sm:font-semibold font-bold sm:font-display font-body text-center
     }
 
     /* Posicionamento específico dos badges - topo do iceberg */
@@ -329,7 +333,7 @@
 
     .iceberg-base-title-wrapper {
         @apply
-        w-full text-center absolute top-10 left-1/2 -translate-x-1/2
+        w-full text-center absolute sm:top-10 xxs:top-6 top-4 left-1/2 -translate-x-1/2
     }
 
     /* Posicionamento específico dos badges - base do iceberg */
@@ -476,21 +480,21 @@
     }
 
     .menu-title {
-        @apply text-2xl font-display font-bold;
+        @apply md:text-2xl text-xl font-display font-bold;
     }
 
     .menu-list {
-        @apply pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 flex-1 overflow-y-auto;
+        @apply pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:gap-6 gap-4 flex-1 overflow-y-auto;
     }
 
     .menu-item {
-        @apply w-full h-full p-8 rounded-2xl text-azul-principal font-display font-semibold border border-azul-200 bg-white/70;
+        @apply w-full h-full md:p-8 p-6 rounded-2xl text-azul-principal font-display font-semibold border border-azul-200 bg-white/70;
         @apply hover:bg-azul-100 hover:border-azul-200 transition-colors duration-200;
-        @apply flex flex-col items-start justify-center gap-3;
+        @apply flex md:flex-col flex-row md:items-start items-center md:justify-center justify-start gap-3;
     }
 
     .menu-item-text {
-        @apply text-lg;
+        @apply md:text-lg text-base;
     }
 
     /* Classes semânticas para animações */
@@ -502,7 +506,7 @@
 
     /* Seção Diagnóstico */
     .diagnostico-content-row {
-        @apply flex sm:flex-row flex-col items-center justify-center gap-12;
+        @apply flex sm:flex-row flex-col xs:items-center items-start justify-center xs:gap-12 gap-6;
     }
 
     /* Seção Entenda a Miastenia Gravis */
@@ -522,16 +526,116 @@
         @apply flex flex-row items-center gap-10 mt-14;
     }
 
+    .como-age-title-row > div {
+        @apply w-full;
+    }
+
+    .como-age-title-row h3 {
+        @apply text-amarelo ml:text-3xl text-2xl leading-tight mb-6;
+    }
+
     .como-age-cards-row {
         @apply flex sm:flex-row flex-col items-start gap-10 mt-8;
+    }
+
+    .como-age-cards-row > div {
+        @apply w-full sm:w-1/3 relative;
+    }
+
+    .como-age-cards-row .card-content-wrapper {
+        @apply flex sm:flex-col xxs:flex-row flex-col sm:items-start xxs:items-center items-start gap-4 relative z-10;
+    }
+
+    .como-age-cards-row p {
+        @apply text-white ml:text-lg text-base;
+    }
+
+    .como-age-cards-row .connection-line {
+        @apply absolute top-12 left-12 -right-12 z-0 sm:block hidden;
+    }
+
+    .como-age-cards-row .connection-line img {
+        @apply w-full h-2 object-cover;
     }
 
     .tipos-title-row {
         @apply flex flex-row items-center gap-10 mt-14;
     }
 
+    .tipos-title-row > div {
+        @apply w-full;
+    }
+
+    .tipos-title-row h3 {
+        @apply text-amarelo ml:text-3xl text-2xl leading-tight mb-6;
+    }
+
     .tipos-cards-row {
         @apply flex md:flex-row flex-col items-start gap-10 mt-8;
+    }
+
+    .tipos-cards-row > div {
+        @apply w-full md:w-1/2;
+    }
+
+    .tipos-cards-row .card-wrapper {
+        @apply flex xxs:flex-row flex-col items-start gap-6;
+    }
+
+    .tipos-cards-row .tipo-content {
+        @apply flex flex-col items-start;
+    }
+
+    .tipos-cards-row h4 {
+        @apply text-amarelo ml:text-2xl text-xl leading-tight mb-4;
+    }
+
+    .tipos-cards-row p {
+        @apply text-white ml:text-lg text-base;
+    }
+
+    .juncoes-neuromusculares-section {
+        @apply mt-14;
+    }
+
+    .juncoes-neuromusculares-section .main-container {
+        @apply w-full bg-rosa-700 rounded-3xl px-4 pt-8 pb-4 relative z-10;
+    }
+
+    .juncoes-neuromusculares-section .cards-wrapper {
+        @apply flex ml:flex-row flex-col items-stretch gap-4;
+    }
+
+    .juncoes-neuromusculares-section .comparison-card {
+        @apply w-full ml:w-1/2 flex flex-col items-center ml:mb-0 mb-6;
+    }
+
+    .juncoes-neuromusculares-section .comparison-card:last-child {
+        @apply mb-0;
+    }
+
+    .juncoes-neuromusculares-section .card-title {
+        @apply text-amarelo ml:text-2xl text-xl leading-tight mb-4 text-center;
+    }
+
+    .juncoes-neuromusculares-section .card-content {
+        @apply flex xs:flex-row flex-col sm:items-center items-start gap-6 xs:bg-rosa-800 bg-transparent rounded-2xl overflow-hidden w-full h-full xs:p-6 p-0;
+    }
+
+    .juncoes-neuromusculares-section .card-image {
+        @apply xs:w-1/3 w-full rounded-2xl;
+    }
+
+    .juncoes-neuromusculares-section .card-list {
+        @apply list-decimal list-inside text-white ml:text-lg text-base;
+    }
+
+    .juncoes-neuromusculares-section .credits-container {
+        @apply bg-rosa-800 rounded-3xl px-6 pt-14 pb-4 -mt-10 relative z-0;
+    }
+
+    .juncoes-neuromusculares-section .credits-text {
+        @apply text-white text-sm;
     }
 
     /* Seção Diagnóstico MG */
@@ -541,6 +645,54 @@
 
     .diagnostico-bottom-row {
         @apply flex ml:flex-row flex-col items-stretch gap-6;
+    }
+
+    /* Diagnóstico MG - Linha superior */
+    .diagnostico-info-card-container {
+        @apply w-full md:max-w-[428px];
+    }
+
+    .diagnostico-info-card {
+        @apply bg-azul-100 rounded-3xl p-10;
+    }
+
+    .diagnostico-info-card h2 {
+        @apply text-azul-principal ml:text-4xl text-3xl leading-tight mb-4;
+    }
+
+    .diagnostico-info-card p {
+        @apply ml:text-lg text-base;
+    }
+
+    .diagnostico-image-container {
+        @apply 
+        w-full h-auto overflow-hidden rounded-3xl relative 
+        md:min-h-[auto] min-h-[300px];
+    }
+
+    .diagnostico-image {
+        @apply absolute top-0 left-0 w-full h-full object-cover object-center;
+    }
+
+    /* Diagnóstico MG - Linha inferior */
+    .diagnostico-card-container {
+        @apply w-full ml:w-1/2;
+    }
+
+    .diagnostico-card {
+        @apply flex xs:flex-row flex-col items-start gap-6 bg-azul-principal rounded-3xl xs:p-8 p-6 h-full;
+    }
+
+    .diagnostico-card-content {
+        @apply flex flex-col items-start;
+    }
+
+    .diagnostico-card-text {
+        @apply text-white ml:text-lg text-base mb-4;
+    }
+
+    .diagnostico-card-text-final {
+        @apply text-white ml:text-lg text-base;
     }
 
     /* Seção Tratamento */
@@ -586,4 +738,552 @@
     .juntos-content-block {
         @apply w-full bg-azul-100 ml:p-10 p-6 pt-10 rounded-3xl;
     }
+
+    /* Header */
+    header {
+        @apply py-6 absolute top-0 left-0 right-0 z-50 rounded-b-2xl;
+    }
+
+    header .row {
+        @apply flex flex-row items-center justify-between gap-10;
+    }
+
+    header img {
+        @apply w-auto h-8;
+    }
+
+    /* Hero Section */
+    #hero {
+        @apply w-full min-h-screen overflow-hidden relative;
+    }
+
+    .hero-bg {
+        @apply absolute inset-0 -z-10 bg-hero bg-cover sm:bg-center bg-[30%_100%] bg-no-repeat;
+    }
+
+    #hero .hero-gradient-overlay {
+        @apply absolute top-0 left-0 right-0 z-10 h-44 bg-gradient-to-b from-azul-principal/90 to-azul-principal/0 bg-blend-multiply;
+    }
+
+    #hero .hero-content-wrapper {
+        @apply absolute sm:top-1/2 top-auto sm:bottom-auto bottom-6 sm:-translate-y-1/2 left-0 right-0 z-10;
+    }
+
+    #hero .hero-content-wrapper .container > div {
+        @apply flex flex-row justify-end;
+    }
+
+    #hero .hero-content-column {
+        @apply w-full sm:w-5/12
+        sm:p-0 p-6 sm:rounded-none rounded-3xl sm:bg-transparent bg-azul-50;
+    }
+
+    #hero h1 {
+        @apply text-azul-principal ml:text-5xl xs:text-4xl text-3xl leading-tight sm:max-w-[380px] xs:max-w-max max-w-[300px] xs:mb-6 mb-4;
+    }
+
+    #hero p {
+        @apply text-azul-principal sm:max-w-[440px] ml:text-lg text-base xs:mb-6 mb-4;
+    }
+
+    /* Miastenia Gravis Section */
+    #miastenia-gravis {
+        @apply md:pt-20 pt-16 overflow-hidden;
+    }
+
+    #miastenia-gravis .miastenia-content-row .left-column {
+        @apply w-full ml:w-5/12;
+    }
+
+    #miastenia-gravis h2 {
+        @apply text-azul-principal ml:text-4xl text-3xl leading-tight mb-6;
+    }
+
+    #miastenia-gravis p {
+        @apply ml:text-lg text-base mb-4;
+    }
+
+    #miastenia-gravis p:last-of-type {
+        @apply mb-0;
+    }
+
+    #miastenia-gravis .miastenia-content-row .right-column {
+        @apply w-full ml:w-7/12;
+    }
+
+    #miastenia-gravis img {
+        @apply w-full h-auto rounded-3xl aspect-video object-cover;
+    }
+
+    /* Quando o Diagnóstico Chega Section */
+    #quando-o-diagnostico-chega {
+        @apply w-full md:py-20 py-16 relative overflow-hidden;
+    }
+
+    #quando-o-diagnostico-chega .container {
+        @apply relative z-10;
+    }
+
+    #quando-o-diagnostico-chega .diagnostico-content-row .left-column {
+        @apply w-auto;
+    }
+
+    #quando-o-diagnostico-chega h2 {
+        @apply flex flex-col items-start text-azul-principal;
+    }
+
+    #quando-o-diagnostico-chega h2 .span-line-1 {
+        @apply xs:text-nowrap text-wrap ml:text-4xl text-3xl leading-tight;
+    }
+
+    #quando-o-diagnostico-chega h2 .span-line-2 {
+        @apply text-rosa-principal text-nowrap ml:text-5xl text-4xl leading-tight;
+    }
+
+    #quando-o-diagnostico-chega h2 .span-line-3 {
+        @apply text-nowrap ml:text-4xl text-3xl leading-tight;
+    }
+
+    #quando-o-diagnostico-chega h2 .span-line-4 {
+        @apply text-azul-400 ml:text-[80px] xxs:text-[60px] text-[40px] leading-none text-nowrap;
+    }
+
+    #quando-o-diagnostico-chega .diagnostico-content-row .right-column {
+        @apply w-full sm:max-w-[438px];
+    }
+
+    #quando-o-diagnostico-chega p {
+        @apply ml:text-lg text-base text-azul-principal;
+    }
+
+    #quando-o-diagnostico-chega .rays-background {
+        @apply absolute bottom-0 left-0 right-0 -z-10 flex flex-row items-end justify-between;
+    }
+
+    #quando-o-diagnostico-chega .ray-container {
+        @apply w-2/5 h-auto relative;
+    }
+
+    #quando-o-diagnostico-chega .ray-container .gradient-top {
+        @apply absolute top-0 left-0 right-0 z-10 w-full h-28 bg-gradient-to-b from-azul-50/100 to-azul-50/0;
+    }
+
+    #quando-o-diagnostico-chega .ray-container.left .gradient-side {
+        @apply absolute top-0 bottom-0 right-0 z-10 w-28 h-full bg-gradient-to-l from-azul-50/100 to-azul-50/0;
+    }
+
+    #quando-o-diagnostico-chega .ray-container.right .gradient-side {
+        @apply absolute top-0 bottom-0 left-0 z-10 w-28 h-full bg-gradient-to-r from-azul-50/100 to-azul-50/0;
+    }
+
+    #quando-o-diagnostico-chega .ray-container img {
+        @apply w-full h-auto;
+    }
+
+    #quando-o-diagnostico-chega .ray-container.right img {
+        @apply -scale-x-100;
+    }
+
+    /* Entenda a Miastenia Gravis Section */
+    #entenda-a-miastenia-gravis {
+        @apply md:py-20 py-16 bg-rosa-principal;
+    }
+
+    #entenda-a-miastenia-gravis .entenda-content-row .left-column {
+        @apply w-full ml:w-1/2;
+    }
+
+    #entenda-a-miastenia-gravis h2 {
+        @apply text-amarelo ml:text-4xl text-3xl leading-tight mb-6;
+    }
+
+    #entenda-a-miastenia-gravis p {
+        @apply text-white ml:text-lg text-base mb-4;
+    }
+
+    #entenda-a-miastenia-gravis p:last-of-type {
+        @apply mb-0;
+    }
+
+    #entenda-a-miastenia-gravis .entenda-content-row .right-column {
+        @apply w-full ml:w-1/2;
+    }
+
+    #entenda-a-miastenia-gravis .info-card {
+        @apply bg-rosa-700 rounded-3xl overflow-hidden w-full;
+    }
+
+    #entenda-a-miastenia-gravis .info-card img {
+        @apply w-full h-auto;
+    }
+
+    #entenda-a-miastenia-gravis .info-card .card-content {
+        @apply flex flex-row items-start gap-6 p-6;
+    }
+
+    #entenda-a-miastenia-gravis .icon-wrapper {
+        @apply min-w-10 min-h-10 inline-flex items-center justify-center;
+    }
+
+    #entenda-a-miastenia-gravis .icon-wrapper svg {
+        @apply w-full h-auto *:fill-amarelo;
+    }
+
+    #entenda-a-miastenia-gravis .info-card .card-content p {
+        @apply text-white ml:text-lg text-base mb-0;
+    }
+
+    #entenda-a-miastenia-gravis .highlight {
+        @apply font-bold text-amarelo;
+    }
+
+    /* Números Section */
+    #entenda-a-miastenia-gravis .numeros-title-row .title-wrapper {
+        @apply w-full;
+    }
+
+    #entenda-a-miastenia-gravis .numeros-title-row h3 {
+        @apply text-amarelo ml:text-3xl text-2xl leading-tight mb-6;
+    }
+
+    #entenda-a-miastenia-gravis .numeros-cards-row .card-column {
+        @apply w-full md:w-1/2;
+    }
+
+    #entenda-a-miastenia-gravis .numeros-cards-row .card-content {
+        @apply flex flex-col items-start gap-6;
+    }
+
+    #entenda-a-miastenia-gravis .numeros-cards-row .card-header {
+        @apply flex flex-row items-center xxs:gap-6 gap-3;
+    }
+
+    #entenda-a-miastenia-gravis .numeros-cards-row h4 .title-line-1 {
+        @apply mb-2;
+    }
+
+    #entenda-a-miastenia-gravis .numeros-cards-row .number-span {
+        @apply text-amarelo ml:text-6xl text-5xl leading-none mr-1;
+    }
+
+    #entenda-a-miastenia-gravis .numeros-cards-row .text-span {
+        @apply text-white ml:text-3xl text-2xl leading-tight;
+    }
+
+    #entenda-a-miastenia-gravis .numeros-cards-row .title-line-2 {
+        @apply text-white ml:text-3xl text-2xl leading-tight;
+    }
+
+    #entenda-a-miastenia-gravis .numeros-cards-row .title-line-2 .highlight-span {
+        @apply text-amarelo;
+    }
+
+    #entenda-a-miastenia-gravis .numeros-cards-row .card-description {
+        @apply text-white ml:text-lg text-base;
+    }
+
+    #entenda-a-miastenia-gravis .numeros-cards-row .right-card h4 .main-text {
+        @apply text-white ml:text-3xl text-2xl leading-tight mb-2;
+    }
+
+    #entenda-a-miastenia-gravis .numeros-cards-row .right-card h4 .highlight-text {
+        @apply ml:text-6xl text-5xl leading-none text-amarelo;
+    }
+
+    #entenda-a-miastenia-gravis .numeros-cards-row .right-card h4 .highlight-text sup {
+        @apply ml:text-4xl text-3xl;
+    }
+
+    #entenda-a-miastenia-gravis .numeros-cards-row .card-list {
+        @apply list-disc list-inside text-white ml:text-lg text-base;
+    }
+
+    /* Seção de Tratamento */
+    #tratamento-para-a-miastenia-gravis {
+        @apply md:py-20 py-16;
+    }
+
+    .tratamento-header-block {
+        @apply flex flex-col items-center w-full;
+    }
+
+    .tratamento-header-block h2 {
+        @apply text-azul-principal ml:text-4xl text-3xl leading-tight mb-4 text-center;
+    }
+
+    .tratamento-header-block > p {
+        @apply ml:text-lg text-base text-center mb-10;
+    }
+
+    .tratamento-two-cols-row {
+        @apply flex md:flex-row flex-col items-stretch w-full gap-6;
+    }
+
+    .tratamento-two-cols-row > div {
+        @apply md:w-1/2 w-full;
+    }
+
+    .tratamento-two-cols-row .card-bg-hero {
+        background-image: url('/src/img/bg-hero.webp');
+        @apply bg-cover bg-center bg-no-repeat h-full w-full sm:p-10 p-6 rounded-3xl min-h-[420px] relative overflow-hidden flex items-end justify-end;
+    }
+
+    .tratamento-two-cols-row .card-bg-ilustra {
+        background-image: url('/src/img/ilustra-kv-3.webp');
+        @apply bg-cover bg-center bg-no-repeat h-full w-full sm:p-10 p-6 rounded-3xl min-h-[420px] relative overflow-hidden flex items-end justify-end;
+    }
+
+    .tratamento-two-cols-row .card-overlay {
+        @apply absolute bottom-0 left-0 w-full h-[250px] bg-gradient-to-b from-transparent to-azul-principal/90 z-0;
+    }
+
+    .tratamento-two-cols-row .card-content {
+        @apply flex flex-col items-start justify-end h-full w-full relative z-10;
+    }
+
+    .tratamento-two-cols-row .card-content p {
+        @apply xs:text-xl text-base text-white sm:font-display font-bold font-body;
+    }
+
+    .tratamento-info-stripe-row {
+        @apply flex flex-row items-center w-full mt-6;
+    }
+
+    .tratamento-info-stripe-row > div {
+        @apply bg-azul-principal rounded-3xl p-6 flex flex-row items-center gap-6;
+    }
+
+    .tratamento-info-stripe-row p {
+        @apply text-white ml:text-xl text-base;
+    }
+
+    .tratamento-abordagem-row {
+        @apply flex ml:flex-row flex-col items-center w-full mt-14 gap-10;
+    }
+
+    .tratamento-abordagem-row .left-card-wrapper {
+        @apply w-full ml:max-w-[400px];
+    }
+
+    .tratamento-abordagem-row .left-card {
+        @apply bg-azul-principal p-8 rounded-3xl;
+    }
+
+    .tratamento-abordagem-row .left-card .frame-icon {
+        @apply mb-6;
+    }
+
+    .tratamento-abordagem-row .left-card h4 {
+        @apply mb-4;
+    }
+
+    .tratamento-abordagem-row .left-card h4 > div {
+        @apply block;
+    }
+
+    .tratamento-abordagem-row .left-card h4 .text-ate {
+        @apply ml:text-2xl text-xl text-amarelo;
+    }
+
+    .tratamento-abordagem-row .left-card h4 .number-20 {
+        @apply ml:text-6xl text-5xl leading-none text-amarelo;
+    }
+
+    .tratamento-abordagem-row .left-card h4 .text-dos-pacientes {
+        @apply ml:text-2xl text-xl text-amarelo;
+    }
+
+    .tratamento-abordagem-row .left-card h4 .subtitle-text {
+        @apply text-white text-2xl;
+    }
+
+    .tratamento-abordagem-row .right-content {
+        @apply w-full;
+    }
+
+    .tratamento-abordagem-row .right-content h4 {
+        @apply text-azul-principal ml:text-3xl text-2xl leading-tight mb-6;
+    }
+
+    .tratamento-abordagem-row .right-content p {
+        @apply ml:text-lg text-base mb-4;
+    }
+
+    .tratamento-abordagem-row .right-content p:last-child {
+        @apply mb-0;
+    }
+
+    /* Seção Como é a vida com Miastenia */
+    #como-e-a-vida-com-miastenia {
+        @apply md:py-20 py-16 bg-rosa-principal rounded-t-[80px];
+    }
+
+    #como-e-a-vida-com-miastenia .como-vida-main-wrapper {
+        @apply w-full;
+    }
+
+    #como-e-a-vida-com-miastenia .como-vida-header-block {
+        @apply flex flex-col items-center w-full mb-8;
+    }
+
+    #como-e-a-vida-com-miastenia h2 {
+        @apply text-amarelo ml:text-4xl text-3xl leading-tight mb-4 text-center;
+    }
+
+    #como-e-a-vida-com-miastenia .como-vida-header-block p {
+        @apply text-white ml:text-lg text-base text-center;
+    }
+
+    #como-e-a-vida-com-miastenia .como-vida-video-container {
+        @apply w-full max-w-4xl mx-auto mb-8;
+    }
+
+    #como-e-a-vida-com-miastenia .como-vida-video-wrapper {
+        @apply aspect-video bg-rosa-700 rounded-3xl overflow-hidden shadow-lg shadow-rosa-700/20;
+    }
+
+    #como-e-a-vida-com-miastenia .como-vida-video-wrapper iframe {
+        @apply w-full h-full;
+    }
+
+    #como-e-a-vida-com-miastenia .como-vida-cta-wrapper {
+        @apply flex justify-center;
+    }
+
+    #como-e-a-vida-com-miastenia .como-vida-cta-pill {
+        @apply inline-flex sm:flex-row flex-col sm:items-center items-start justify-center bg-rosa-50 sm:rounded-full rounded-3xl sm:py-4 py-4 sm:px-8 px-4 sm:gap-4 gap-2;
+    }
+
+    #como-e-a-vida-com-miastenia .como-vida-cta-pill p {
+        @apply text-rosa-principal ml:text-lg text-base font-display font-bold;
+    }
+
+    #como-e-a-vida-com-miastenia .como-vida-cta-pill .btn .text {
+        @apply text-nowrap;
+    }
+
+    #como-e-a-vida-com-miastenia .como-vida-cta-pill .btn .icon svg {
+        @apply -rotate-90;
+    }
+
+    /* Seção Viver é Raro */
+    #viver-e-raro {
+        @apply md:py-20 py-16 bg-rosa-700 rounded-b-[80px];
+    }
+
+    #viver-e-raro .viver-raro-content-row {
+        @apply w-full flex md:flex-row flex-col items-center gap-10;
+    }
+
+    #viver-e-raro .viver-raro-left-column {
+        @apply flex flex-col items-start w-full md:w-1/2;
+    }
+
+    #viver-e-raro h2 {
+        @apply text-amarelo ml:text-4xl text-3xl leading-tight mb-4;
+    }
+
+    #viver-e-raro p {
+        @apply text-white ml:text-lg text-base;
+    }
+
+    #viver-e-raro .viver-raro-btn {
+        @apply mt-6;
+    }
+
+    #viver-e-raro .viver-raro-right-column {
+        @apply w-full md:w-1/2 max-w-4xl mx-auto;
+    }
+
+    #viver-e-raro .viver-raro-video-card {
+        @apply aspect-video bg-rosa-700 rounded-3xl overflow-hidden shadow-lg shadow-rosa-700/20 relative;
+    }
+
+    #viver-e-raro .viver-raro-video-card img {
+        @apply w-full h-full object-cover;
+    }
+
+    #viver-e-raro .viver-raro-video-overlay {
+        @apply absolute inset-0 flex items-center justify-center;
+    }
+
+    /* Seção Quando Estamos Juntos */
+    #quando-estamos-juntos-a-tempestade-passa {
+        @apply md:py-20 py-16;
+    }
+
+    #quando-estamos-juntos-a-tempestade-passa .juntos-main-wrapper {
+        @apply flex flex-row items-center w-full;
+    }
+
+    #quando-estamos-juntos-a-tempestade-passa .juntos-content-block {
+        @apply w-full bg-azul-100 ml:p-10 p-6 pt-10 rounded-3xl;
+    }
+
+    #quando-estamos-juntos-a-tempestade-passa h2 {
+        @apply text-azul-principal ml:text-4xl text-3xl leading-tight mb-4;
+    }
+
+    #quando-estamos-juntos-a-tempestade-passa p {
+        @apply ml:text-lg text-base;
+    }
+
+    #quando-estamos-juntos-a-tempestade-passa .juntos-grid {
+        @apply grid sm:grid-cols-4 xxs:grid-cols-2 grid-cols-1 xxs:gap-6 gap-4 mt-8;
+    }
+
+    #quando-estamos-juntos-a-tempestade-passa .juntos-grid a {
+        @apply bg-white rounded-2xl p-6 flex items-center justify-center hover:shadow-lg shadow-azul-principal/20 transition-shadow duration-300 h-36;
+    }
+
+    #quando-estamos-juntos-a-tempestade-passa .juntos-grid a.casa-hunter {
+        @apply shadow-azul-900/20;
+    }
+
+    #quando-estamos-juntos-a-tempestade-passa .juntos-grid img {
+        @apply max-w-full max-h-full object-contain;
+    }
+
+    /* Footer */
+    footer {
+        @apply pb-10;
+    }
+
+    footer .footer-references-wrapper {
+        @apply flex flex-row items-center w-full;
+    }
+
+    footer .footer-references-content {
+        @apply w-full;
+    }
+
+    footer .footer-references-text {
+        @apply text-sm break-words;
+    }
+
+    footer .footer-logo-wrapper {
+        @apply flex flex-row items-center w-full md:mt-20 mt-16;
+    }
+
+    footer .footer-logo-container {
+        @apply w-full border border-azul-200 rounded-3xl;
+    }
+
+    footer .footer-logo-content {
+        @apply p-20 flex items-center justify-center;
+    }
+
+    footer .footer-logo-content img {
+        @apply max-w-full h-14;
+    }
+
+    footer .footer-copyright-content {
+        @apply px-10 py-6 flex ml:flex-row flex-col items-center justify-between ml:gap-10 gap-4 border-t border-azul-200;
+    }
+
+    footer .footer-copyright-content p {
+        @apply text-sm;
+    }
+
+
 }
