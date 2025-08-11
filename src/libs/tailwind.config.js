@@ -5,6 +5,15 @@ module.exports = {
     "../*/*"
   ],
   theme: {
+    screens: {
+      'sm': '640px',
+      'ms': '704px',  // Novo breakpoint entre sm e md
+      'md': '768px',
+      'ml': '896px',  // Novo breakpoint entre md e lg
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         azul: {

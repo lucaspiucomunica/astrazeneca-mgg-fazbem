@@ -8,7 +8,7 @@
 @layer base {
     html {
         @apply 
-        scroll-smooth antialiased
+        scroll-smooth antialiased overflow-x-hidden
     }
 
     body {
@@ -217,17 +217,17 @@
 
     .symptoms-title {
         @apply
-        text-azul-principal text-4xl leading-tight mb-6
+        text-azul-principal ml:text-4xl text-3xl leading-tight mb-6
     }
 
     .symptoms-subtitle {
         @apply
-        text-lg font-bold mb-4
+        ml:text-lg text-base font-bold mb-4
     }
 
     .symptoms-description {
         @apply
-        text-lg
+        ml:text-lg text-base
     }
 
     .iceberg-section-title {
@@ -242,12 +242,12 @@
 
     .iceberg-title {
         @apply
-        text-azul-principal text-3xl leading-tight py-10
+        text-azul-principal ml:text-3xl text-2xl leading-tight py-10
     }
 
     .iceberg-title-white {
         @apply
-        text-azul-50 text-3xl leading-tight
+        text-azul-50 ml:text-3xl text-2xl leading-tight
     }
 
     .iceberg-container {
@@ -282,7 +282,7 @@
 
     .symptom-badge {
         @apply
-        inline-flex items-center gap-4 p-1 rounded-full bg-azul-50 border border-azul-400 absolute
+        inline-flex items-center gap-4 ms:p-1 p-0.5 rounded-full bg-azul-50 border border-azul-400 absolute
     }
 
     .symptom-badge-left {
@@ -297,7 +297,7 @@
 
     .symptom-text {
         @apply
-        text-azul-principal text-xl font-semibold font-display text-center
+        text-azul-principal ml:text-xl ms:text-lg text-base font-semibold font-display text-center
     }
 
     /* Posicionamento específico dos badges - topo do iceberg */
@@ -376,17 +376,17 @@
     /* Cards informativos */
     .info-cards-container {
         @apply
-        pt-24 flex flex-row items-center justify-center gap-10
+        pt-24 flex ml:flex-row flex-col items-center justify-center gap-10
     }
 
     .info-card {
         @apply
-        w-1/2
+        w-full ml:w-1/2
     }
 
     .statistics-card {
         @apply
-        bg-azul-principal p-10 rounded-3xl
+        bg-azul-principal md:p-10 p-6 py-10 rounded-3xl
     }
 
     .statistics-title {
@@ -396,27 +396,27 @@
 
     .statistics-number-line {
         @apply
-        text-2xl text-amarelo
+        ml:text-2xl text-xl text-amarelo
     }
 
     .statistics-number {
         @apply
-        text-6xl text-amarelo
+        ml:text-6xl text-5xl text-amarelo
     }
 
     .statistics-subtitle {
         @apply
-        text-white text-2xl
+        text-white ml:text-2xl text-xl
     }
 
     .statistics-description {
         @apply
-        text-white text-lg mb-4
+        text-white ml:text-lg text-base mb-4
     }
 
     .statistics-list {
         @apply
-        list-none text-white text-lg flex flex-col gap-2
+        list-none text-white ml:text-lg text-base flex flex-col gap-2 mb-4
     }
 
     .statistics-list-item {
@@ -431,7 +431,7 @@
 
     .statistics-final-text {
         @apply
-        text-white text-lg
+        text-white ml:text-lg text-base
     }
 
     .attention-card-header {
@@ -441,17 +441,17 @@
 
     .attention-card-title {
         @apply
-        text-azul-principal text-3xl leading-tight
+        text-azul-principal ml:text-3xl text-2xl leading-tight
     }
 
     .attention-card-text {
         @apply
-        text-lg mb-4
+        ml:text-lg text-base mb-4
     }
 
     .attention-card-text-final {
         @apply
-        text-lg
+        ml:text-lg text-base
     }
 
     /* Menu da Landing Page */
@@ -491,5 +491,99 @@
 
     .menu-item-text {
         @apply text-lg;
+    }
+
+    /* Classes semânticas para animações */
+    
+    /* Seção Miastenia Gravis */
+    .miastenia-content-row {
+        @apply flex ml:flex-row flex-col items-center gap-10;
+    }
+
+    /* Seção Diagnóstico */
+    .diagnostico-content-row {
+        @apply flex sm:flex-row flex-col items-center justify-center gap-12;
+    }
+
+    /* Seção Entenda a Miastenia Gravis */
+    .entenda-content-row {
+        @apply flex ml:flex-row flex-col items-center gap-10;
+    }
+
+    .numeros-title-row {
+        @apply flex flex-row items-center gap-10 mt-14;
+    }
+
+    .numeros-cards-row {
+        @apply flex md:flex-row flex-col items-start gap-10 mt-8;
+    }
+
+    .como-age-title-row {
+        @apply flex flex-row items-center gap-10 mt-14;
+    }
+
+    .como-age-cards-row {
+        @apply flex sm:flex-row flex-col items-start gap-10 mt-8;
+    }
+
+    .tipos-title-row {
+        @apply flex flex-row items-center gap-10 mt-14;
+    }
+
+    .tipos-cards-row {
+        @apply flex md:flex-row flex-col items-start gap-10 mt-8;
+    }
+
+    /* Seção Diagnóstico MG */
+    .diagnostico-top-row {
+        @apply flex md:flex-row flex-col items-stretch gap-6 mb-6;
+    }
+
+    .diagnostico-bottom-row {
+        @apply flex ml:flex-row flex-col items-stretch gap-6;
+    }
+
+    /* Seção Tratamento */
+    .tratamento-header-block {
+        @apply flex flex-col items-center w-full;
+    }
+
+    .tratamento-two-cols-row {
+        @apply flex md:flex-row flex-col items-stretch w-full gap-6;
+    }
+
+    .tratamento-info-stripe-row {
+        @apply flex flex-row items-center w-full mt-6;
+    }
+
+    .tratamento-abordagem-row {
+        @apply flex ml:flex-row flex-col items-center w-full mt-14 gap-10;
+    }
+
+    /* Seção Como é a vida com Miastenia */
+    .como-vida-header-block {
+        @apply flex flex-col items-center w-full mb-8;
+    }
+
+    .como-vida-video-wrapper {
+        @apply aspect-video bg-rosa-700 rounded-3xl overflow-hidden shadow-lg shadow-rosa-700/20;
+    }
+
+    .como-vida-cta-pill {
+        @apply inline-flex flex-row items-center justify-center bg-rosa-50 rounded-full py-4 px-8 gap-4;
+    }
+
+    /* Seção Viver é Raro */
+    .viver-raro-content-row {
+        @apply w-full flex md:flex-row flex-col items-center gap-10;
+    }
+
+    .viver-raro-video-card {
+        @apply aspect-video bg-rosa-700 rounded-3xl overflow-hidden shadow-lg shadow-rosa-700/20 relative;
+    }
+
+    /* Seção Quando estamos juntos */
+    .juntos-content-block {
+        @apply w-full bg-azul-100 ml:p-10 p-6 pt-10 rounded-3xl;
     }
 }
