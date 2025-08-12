@@ -501,7 +501,7 @@
     
     /* Seção Miastenia Gravis */
     .miastenia-content-row {
-        @apply flex ml:flex-row flex-col items-center gap-10;
+        @apply flex ml:flex-row flex-col items-center justify-center gap-10;
     }
 
     /* Seção Diagnóstico */
@@ -792,7 +792,7 @@
     }
 
     #miastenia-gravis .miastenia-content-row .left-column {
-        @apply w-full ml:w-5/12;
+        @apply w-full max-w-[953px];
     }
 
     #miastenia-gravis h2 {
@@ -1204,6 +1204,44 @@
     }
 
     #viver-e-raro .viver-raro-video-overlay {
+        @apply absolute inset-0 flex items-center justify-center;
+    }
+
+    /* Vídeo Hero - Componente igual ao da Rita */
+    .hero-video-container {
+        @apply w-full max-w-4xl mx-auto;
+    }
+
+    .hero-video-wrapper {
+        @apply aspect-video bg-azul-principal rounded-3xl overflow-hidden shadow-lg shadow-azul-principal/20;
+    }
+
+    .hero-video-wrapper iframe {
+        @apply w-full h-full;
+    }
+
+    .hero-video-card {
+        @apply aspect-video bg-azul-principal rounded-3xl overflow-hidden shadow-lg shadow-azul-principal/20 relative cursor-pointer;
+    }
+
+    .hero-video-card img {
+        @apply w-full h-full object-cover;
+    }
+
+    .hero-video-overlay {
+        @apply absolute inset-0 flex items-center justify-center;
+    }
+
+    /* Vídeo da Rita - Componente similar ao Viver é Raro */
+    .rita-video-card {
+        @apply aspect-video bg-rosa-700 rounded-3xl overflow-hidden shadow-lg shadow-rosa-700/20 relative cursor-pointer;
+    }
+
+    .rita-video-card img {
+        @apply w-full h-full object-cover;
+    }
+
+    .rita-video-overlay {
         @apply absolute inset-0 flex items-center justify-center;
     }
 

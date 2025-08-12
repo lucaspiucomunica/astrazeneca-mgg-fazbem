@@ -1710,6 +1710,7 @@ h1,
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 2.5rem;
 }
 
@@ -2624,12 +2625,7 @@ header img{
 
 #miastenia-gravis .miastenia-content-row .left-column{
   width: 100%;
-}
-
-@media (min-width: 896px){
-  #miastenia-gravis .miastenia-content-row .left-column{
-    width: 41.666667%;
-  }
+  max-width: 953px;
 }
 
 #miastenia-gravis h2{
@@ -3802,6 +3798,95 @@ header img{
   justify-content: center;
 }
 
+/* Vídeo Hero - Componente igual ao da Rita */
+
+.hero-video-container{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 56rem;
+}
+
+.hero-video-wrapper{
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 75 143 / var(--tw-bg-opacity, 1));
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: rgb(59 75 143 / 0.2);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.hero-video-wrapper iframe{
+  height: 100%;
+  width: 100%;
+}
+
+.hero-video-card{
+  position: relative;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 75 143 / var(--tw-bg-opacity, 1));
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: rgb(59 75 143 / 0.2);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.hero-video-card img{
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero-video-overlay{
+  position: absolute;
+  inset: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Vídeo da Rita - Componente similar ao Viver é Raro */
+
+.rita-video-card{
+  position: relative;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(186 22 65 / var(--tw-bg-opacity, 1));
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: rgb(186 22 65 / 0.2);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.rita-video-card img{
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.rita-video-overlay{
+  position: absolute;
+  inset: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Seção Quando Estamos Juntos */
 
 #quando-estamos-juntos-a-tempestade-passa{
@@ -4794,6 +4879,10 @@ footer .footer-copyright-content p{
 
 .max-w-\[840px\]{
   max-width: 840px;
+}
+
+.max-w-\[953px\]{
+  max-width: 953px;
 }
 
 .max-w-full{

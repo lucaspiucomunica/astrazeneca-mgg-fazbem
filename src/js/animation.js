@@ -156,12 +156,12 @@
 
     const title = section.querySelector('h2');
     const paragraphs = section.querySelectorAll('p');
-    const image = section.querySelector('img');
+    const rightColumn = section.querySelector('.miastenia-content-row .right-column');
 
     if (prefersReducedMotion) {
       if (title) title.style.opacity = '1';
       paragraphs.forEach(p => (p.style.opacity = '1'));
-      if (image) image.style.opacity = '1';
+      if (rightColumn) rightColumn.style.opacity = '1';
       return;
     }
 
@@ -171,7 +171,7 @@
     // Estados iniciais antes do scroll
     if (title) gsap.set(title, { y: 24, opacity: 0 });
     if (paragraphs && paragraphs.length) gsap.set(paragraphs, { y: 20, opacity: 0 });
-    if (image) gsap.set(image, { x: 24, opacity: 0, scale: 0.98, transformOrigin: '50% 50%' });
+    if (rightColumn) gsap.set(rightColumn, { x: 24, opacity: 0, scale: 0.98, transformOrigin: '50% 50%' });
 
     const tl = gsap.timeline({
       defaults: { ease: 'power3.out' },
@@ -185,7 +185,7 @@
 
     if (title) tl.to(title, { y: 0, opacity: 1, duration: 0.6 }, 0);
     if (paragraphs && paragraphs.length) tl.to(paragraphs, { y: 0, opacity: 1, duration: 0.5, stagger: 0.12 }, '>-0.2');
-    if (image) tl.to(image, { x: 0, opacity: 1, scale: 1, duration: 0.7 }, '>-0.1');
+    if (rightColumn) tl.to(rightColumn, { x: 0, opacity: 1, scale: 1, duration: 0.7 }, '>-0.1');
 
     // Se já passou do trigger, executa com delay
     if (shouldAnimate) {

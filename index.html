@@ -57,7 +57,7 @@
         </div>
     </header>
 
-    <nav id="menu-panel" class="menu-panel" aria-hidden="true">
+    <nav id="menu-panel" class="menu-panel" aria-hidden="true" inert>
         <div class="menu-inner">
             <div class="menu-header container">
                 <h2 class="menu-title">Menu</h2>
@@ -215,10 +215,6 @@
                         <h2>Miastenia Gravis</h2>
                         <p>Olá! Se você chegou até aqui, talvez esteja em busca de respostas sobre a Miastenia Gravis, ou tentando encontrar um ponto de apoio. Por isso, este conteúdo foi formulado com informação de qualidade e, o mais importante: com cuidado, pensando em quem vive essa jornada e merece acolhimento a cada passo. Então, vamos lá. </p>
                         <p>Quando a Miastenia Gravis se manifesta, é como enfrentar uma tempestade repentina. Os sintomas vêm e vão como rajadas de vento imprevisíveis. Você tenta seguir em frente, mas até descobrir o que está acontecendo, tudo parece estar à deriva.</p>
-                    </div>
-
-                    <div class="right-column">
-                        <img src="src/img/bg-hero.webp" alt="Miastenia Gravis">
                     </div>
                 </div>
             </div>
@@ -845,12 +841,28 @@
                     </div>
                     <div class="como-vida-video-container">
                         <div class="como-vida-video-wrapper">
+                            <!-- Thumbnail inicial com overlay -->
+                            <div class="rita-video-card" id="rita-video-thumbnail">
+                                <img 
+                                    src="src/img/thumb-video-rita.webp" 
+                                    alt="Thumbnail do vídeo Como é a vida com Miastenia?"
+                                />
+                                <div class="rita-video-overlay">
+                                    <button class="btn btn-icon btn-icon-big btn-rosa-principal" id="rita-play-button">
+                                        <span class="icon"><img src="src/icons/play.svg" class="svg-inline"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Iframe YouTube (inicialmente oculto) -->
                             <iframe 
-                                src="https://www.youtube.com/embed/67MXay-B9VU"
+                                id="rita-youtube-iframe"
+                                src=""
                                 title="Como é a vida com Miastenia?"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen
+                                style="display: none;"
                             ></iframe>
                         </div>
                     </div>
@@ -944,6 +956,9 @@
         </div>
     </footer>
 
+    <!-- DataLayer para GTM/GA - deve carregar primeiro -->
+    <script src="src/js/dataLayer.js"></script>
+    
     <script src="src/js/theme.js"></script>
     <!-- Bibliotecas GSAP devem carregar antes das animações -->
     <script src="src/js/gsap.min.js"></script>

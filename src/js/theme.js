@@ -7,16 +7,63 @@
 
   let isOpen = false;
 
+  // Inicializar estado do menu - garantir que elementos não sejam focalizáveis quando fechado
+  function initializeMenuState() {
+    const focusableElements = menuPanel.querySelectorAll('button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    focusableElements.forEach(el => {
+      // Salvar tabindex original se existir
+      if (el.hasAttribute('tabindex') && el.getAttribute('tabindex') !== '-1') {
+        el.setAttribute('data-original-tabindex', el.getAttribute('tabindex'));
+      }
+      el.setAttribute('tabindex', '-1');
+    });
+  }
+
+  // Executar inicialização
+  initializeMenuState();
+
   function openMenu() {
     menuPanel.classList.add('is-open');
     menuPanel.setAttribute('aria-hidden', 'false');
+    menuPanel.removeAttribute('inert');
+    
+    // Restaurar tabindex para elementos focalizáveis (fallback para navegadores sem suporte ao inert)
+    const focusableElements = menuPanel.querySelectorAll('button, a, input, select, textarea, [tabindex]');
+    focusableElements.forEach(el => {
+      if (el.hasAttribute('data-original-tabindex')) {
+        el.setAttribute('tabindex', el.getAttribute('data-original-tabindex'));
+        el.removeAttribute('data-original-tabindex');
+      } else {
+        el.removeAttribute('tabindex');
+      }
+    });
+    
     menuButton.setAttribute('aria-expanded', 'true');
     isOpen = true;
   }
 
   function closeMenu() {
+    // Remover foco de qualquer elemento dentro do menu antes de fechá-lo
+    if (document.activeElement && menuPanel.contains(document.activeElement)) {
+      document.activeElement.blur();
+      // Retornar foco para o botão do menu
+      menuButton.focus();
+    }
+    
     menuPanel.classList.remove('is-open');
     menuPanel.setAttribute('aria-hidden', 'true');
+    menuPanel.setAttribute('inert', '');
+    
+    // Fallback para navegadores sem suporte ao inert: desabilitar foco manualmente
+    const focusableElements = menuPanel.querySelectorAll('button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    focusableElements.forEach(el => {
+      // Salvar tabindex original se existir
+      if (el.hasAttribute('tabindex') && el.getAttribute('tabindex') !== '-1') {
+        el.setAttribute('data-original-tabindex', el.getAttribute('tabindex'));
+      }
+      el.setAttribute('tabindex', '-1');
+    });
+    
     menuButton.setAttribute('aria-expanded', 'false');
     isOpen = false;
   }
@@ -100,8 +147,27 @@
   function closeOverlayMenuIfOpen() {
     if (!menuPanel) return;
     if (menuPanel.classList.contains('is-open')) {
+      // Remover foco de qualquer elemento dentro do menu antes de fechá-lo
+      if (document.activeElement && menuPanel.contains(document.activeElement)) {
+        document.activeElement.blur();
+        // Retornar foco para o botão do menu se disponível
+        if (menuButton) menuButton.focus();
+      }
+      
       menuPanel.classList.remove('is-open');
       menuPanel.setAttribute('aria-hidden', 'true');
+      menuPanel.setAttribute('inert', '');
+      
+      // Fallback para navegadores sem suporte ao inert: desabilitar foco manualmente
+      const focusableElements = menuPanel.querySelectorAll('button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      focusableElements.forEach(el => {
+        // Salvar tabindex original se existir
+        if (el.hasAttribute('tabindex') && el.getAttribute('tabindex') !== '-1') {
+          el.setAttribute('data-original-tabindex', el.getAttribute('tabindex'));
+        }
+        el.setAttribute('tabindex', '-1');
+      });
+      
       if (menuButton) menuButton.setAttribute('aria-expanded', 'false');
     }
   }
@@ -135,5 +201,65 @@
     if (!target) return;
     // pequeno atraso para garantir layout estável
     setTimeout(() => scrollToWithHeaderOffset(target), 0);
+  });
+})();
+
+// Funcionalidade do vídeo Hero - Thumbnail com overlay que vira YouTube embed
+(function () {
+  const heroThumbnail = document.getElementById('hero-video-thumbnail');
+  const heroIframe = document.getElementById('hero-youtube-iframe');
+
+  if (!heroThumbnail || !heroIframe) return;
+
+  // Clique em toda a thumbnail do vídeo hero
+  heroThumbnail.addEventListener('click', function (e) {
+    e.preventDefault();
+    
+    // Disparar evento de tracking se disponível
+    if (window.miasteniaTracker) {
+      window.miasteniaTracker.trackCustomEvent('video_play_youtube', {
+        video_title: 'Miastenia Gravis - A tempestade vai e a vida volta',
+        video_id: '67MXay-B9VU'
+      });
+    }
+
+    // Esconder thumbnail
+    heroThumbnail.style.display = 'none';
+    
+    // Configurar e mostrar iframe com autoplay
+    heroIframe.src = 'https://www.youtube.com/embed/67MXay-B9VU?autoplay=1';
+    heroIframe.style.display = 'block';
+    
+    console.log('🎥 Hero YouTube video loaded and playing');
+  });
+})();
+
+// Funcionalidade do vídeo da Rita - Thumbnail com overlay que vira YouTube embed
+(function () {
+  const ritaThumbnail = document.getElementById('rita-video-thumbnail');
+  const ritaIframe = document.getElementById('rita-youtube-iframe');
+
+  if (!ritaThumbnail || !ritaIframe) return;
+
+  // Clique em toda a thumbnail do vídeo da Rita
+  ritaThumbnail.addEventListener('click', function (e) {
+    e.preventDefault();
+    
+    // Disparar evento de tracking se disponível
+    if (window.miasteniaTracker) {
+      window.miasteniaTracker.trackCustomEvent('video_play_youtube', {
+        video_title: 'Como é a vida com Miastenia?',
+        video_id: '67MXay-B9VU'
+      });
+    }
+
+    // Esconder thumbnail
+    ritaThumbnail.style.display = 'none';
+    
+    // Configurar e mostrar iframe com autoplay
+    ritaIframe.src = 'https://www.youtube.com/embed/67MXay-B9VU?autoplay=1';
+    ritaIframe.style.display = 'block';
+    
+    console.log('🎥 YouTube video loaded and playing');
   });
 })();
