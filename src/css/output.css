@@ -2474,13 +2474,14 @@ header img{
   inset: 0px;
   z-index: -10;
   background-image: url('/src/img/bg-hero.webp');
-  background-size: cover;
+  background-size: auto 110%;
   background-position: 30% 100%;
   background-repeat: no-repeat;
 }
 
 @media (min-width: 640px){
   .hero-bg{
+    background-size: cover;
     background-position: center;
   }
 }
@@ -2502,7 +2503,7 @@ header img{
 #hero .hero-content-wrapper{
   position: absolute;
   top: auto;
-  bottom: 1.5rem;
+  bottom: 3.5rem;
   left: 0px;
   right: 0px;
   z-index: 10;
@@ -2575,8 +2576,8 @@ header img{
 
 #hero p{
   margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(59 75 143 / var(--tw-text-opacity, 1));
 }
@@ -2590,6 +2591,8 @@ header img{
 @media (min-width: 640px){
   #hero p{
     max-width: 440px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -4084,6 +4087,10 @@ footer .footer-copyright-content p{
 
 .bottom-10{
   bottom: 2.5rem;
+}
+
+.bottom-14{
+  bottom: 3.5rem;
 }
 
 .bottom-20{
@@ -6069,6 +6076,10 @@ footer .footer-copyright-content p{
           box-decoration-break: clone;
 }
 
+.bg-\[size\:auto_110\%\]{
+  background-size: auto 110%;
+}
+
 .bg-auto{
   background-size: auto;
 }
@@ -7437,6 +7448,10 @@ footer .footer-copyright-content p{
 
   .sm\:bg-transparent{
     background-color: transparent;
+  }
+
+  .sm\:bg-cover{
+    background-size: cover;
   }
 
   .sm\:bg-center{
