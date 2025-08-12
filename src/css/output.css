@@ -3525,8 +3525,8 @@ header img{
 /* Seção Como é a vida com Miastenia */
 
 #como-e-a-vida-com-miastenia{
-  border-top-left-radius: 80px;
-  border-top-right-radius: 80px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   --tw-bg-opacity: 1;
   background-color: rgb(221 33 77 / var(--tw-bg-opacity, 1));
   padding-top: 4rem;
@@ -3535,6 +3535,8 @@ header img{
 
 @media (min-width: 768px){
   #como-e-a-vida-com-miastenia{
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
@@ -3680,8 +3682,8 @@ header img{
 /* Seção Viver é Raro */
 
 #viver-e-raro{
-  border-bottom-right-radius: 80px;
-  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
   --tw-bg-opacity: 1;
   background-color: rgb(186 22 65 / var(--tw-bg-opacity, 1));
   padding-top: 4rem;
@@ -3690,6 +3692,8 @@ header img{
 
 @media (min-width: 768px){
   #viver-e-raro{
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 80px;
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
@@ -3996,8 +4000,15 @@ footer .footer-copyright-content{
 }
 
 footer .footer-copyright-content p{
+  text-align: center;
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+@media (min-width: 896px){
+  footer .footer-copyright-content p{
+    text-align: left;
+  }
 }
 
 .sr-only{
@@ -5788,9 +5799,9 @@ footer .footer-copyright-content p{
   border-bottom-left-radius: 1rem;
 }
 
-.rounded-b-\[80px\]{
-  border-bottom-right-radius: 80px;
-  border-bottom-left-radius: 80px;
+.rounded-b-\[40px\]{
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
 }
 
 .rounded-e{
@@ -5818,9 +5829,9 @@ footer .footer-copyright-content p{
   border-top-right-radius: 0.25rem;
 }
 
-.rounded-t-\[80px\]{
-  border-top-left-radius: 80px;
-  border-top-right-radius: 80px;
+.rounded-t-\[40px\]{
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 
 .rounded-bl{
@@ -7561,6 +7572,16 @@ footer .footer-copyright-content p{
     gap: 1.5rem;
   }
 
+  .md\:rounded-b-\[80px\]{
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+  }
+
+  .md\:rounded-t-\[80px\]{
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+  }
+
   .md\:p-10{
     padding: 2.5rem;
   }
@@ -7612,6 +7633,10 @@ footer .footer-copyright-content p{
 
   .ml\:p-10{
     padding: 2.5rem;
+  }
+
+  .ml\:text-left{
+    text-align: left;
   }
 
   .ml\:text-2xl{

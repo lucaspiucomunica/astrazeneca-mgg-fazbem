@@ -1115,7 +1115,7 @@
 
     /* Seção Como é a vida com Miastenia */
     #como-e-a-vida-com-miastenia {
-        @apply md:py-20 py-16 bg-rosa-principal rounded-t-[80px];
+        @apply md:py-20 py-16 bg-rosa-principal md:rounded-t-[80px] rounded-t-[40px];
     }
 
     #como-e-a-vida-com-miastenia .como-vida-main-wrapper {
@@ -1168,7 +1168,7 @@
 
     /* Seção Viver é Raro */
     #viver-e-raro {
-        @apply md:py-20 py-16 bg-rosa-700 rounded-b-[80px];
+        @apply md:py-20 py-16 bg-rosa-700 md:rounded-b-[80px] rounded-b-[40px];
     }
 
     #viver-e-raro .viver-raro-content-row {
@@ -1282,7 +1282,7 @@
     }
 
     footer .footer-copyright-content p {
-        @apply text-sm;
+        @apply text-sm ml:text-left text-center;
     }
 
 
