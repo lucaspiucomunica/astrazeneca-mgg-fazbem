@@ -2503,10 +2503,16 @@ header img{
 #hero .hero-content-wrapper{
   position: absolute;
   top: auto;
-  bottom: 3.5rem;
+  bottom: 3rem;
   left: 0px;
   right: 0px;
   z-index: 10;
+}
+
+@media (min-width: 340px){
+  #hero .hero-content-wrapper{
+    bottom: 4rem;
+  }
 }
 
 @media (min-width: 640px){
@@ -4089,8 +4095,16 @@ footer .footer-copyright-content p{
   bottom: 2.5rem;
 }
 
+.bottom-12{
+  bottom: 3rem;
+}
+
 .bottom-14{
   bottom: 3.5rem;
+}
+
+.bottom-16{
+  bottom: 4rem;
 }
 
 .bottom-20{
@@ -7194,6 +7208,10 @@ footer .footer-copyright-content p{
 }
 
 @media (min-width: 340px){
+  .xxs\:bottom-16{
+    bottom: 4rem;
+  }
+
   .xxs\:top-6{
     top: 1.5rem;
   }

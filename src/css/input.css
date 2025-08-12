@@ -766,7 +766,7 @@
     }
 
     #hero .hero-content-wrapper {
-        @apply absolute sm:top-1/2 top-auto sm:bottom-auto bottom-14 sm:-translate-y-1/2 left-0 right-0 z-10;
+        @apply absolute sm:top-1/2 top-auto sm:bottom-auto xxs:bottom-16 bottom-12 sm:-translate-y-1/2 left-0 right-0 z-10;
     }
 
     #hero .hero-content-wrapper .container > div {
