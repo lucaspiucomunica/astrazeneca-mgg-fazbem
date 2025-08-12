@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'VAG Rounded Next';
-    src: url('https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/fonts/VAGRoundedNext-Bold.woff2?updatedAt=1748465863545') format('woff2'),
-        url('https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/fonts/VAGRoundedNext-Bold.woff?updatedAt=1748465863539') format('woff');
+    src: url('https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/FazBem/fonts/VAGRoundedNext-Bold.woff2?updatedAt=1755034199960') format('woff2'),
+        url('https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/FazBem/fonts/VAGRoundedNext-Bold.woff?updatedAt=1755034199964') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'VAG Rounded Next';
-    src: url('https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/fonts/VAGRoundedNext-SemiBold.woff2?updatedAt=1748465863530') format('woff2'),
-        url('https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/fonts/VAGRoundedNext-SemiBold.woff?updatedAt=1748465863539') format('woff');
+    src: url('https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/FazBem/fonts/VAGRoundedNext-SemiBold.woff2?updatedAt=1755034199979') format('woff2'),
+        url('https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/FazBem/fonts/VAGRoundedNext-SemiBold.woff?updatedAt=1755034199970') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'VAG Rounded Next';
-    src: url('https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/fonts/VAGRoundedNext-Regular.woff2?updatedAt=1748465863532') format('woff2'),
-        url('https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/fonts/VAGRoundedNext-Regular.woff?updatedAt=1748465863542') format('woff');
+    src: url('https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/FazBem/fonts/VAGRoundedNext-Regular.woff2?updatedAt=1755034199974') format('woff2'),
+        url('https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/FazBem/fonts/VAGRoundedNext-Regular.woff?updatedAt=1755034199975') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

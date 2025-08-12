@@ -1024,12 +1024,12 @@
     }
 
     .tratamento-two-cols-row .card-bg-hero {
-        background-image: url('/src/img/bg-hero.webp');
+        background-image: url('https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/FazBem/img/bg-hero.webp');
         @apply bg-cover bg-center bg-no-repeat h-full w-full sm:p-10 p-6 rounded-3xl min-h-[420px] relative overflow-hidden flex items-end justify-end;
     }
 
     .tratamento-two-cols-row .card-bg-ilustra {
-        background-image: url('/src/img/ilustra-kv-3.webp');
+        background-image: url('https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/FazBem/img/ilustra-kv-3.webp');
         @apply bg-cover bg-center bg-no-repeat h-full w-full sm:p-10 p-6 rounded-3xl min-h-[420px] relative overflow-hidden flex items-end justify-end;
     }
 

@@ -44,7 +44,7 @@ module.exports = {
         'body': ['Roboto Flex', 'sans-serif'],
       },
       backgroundImage: {
-        'hero': "url('/src/img/bg-hero.webp')",
+        'hero': "url('https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/FazBem/img/bg-hero.webp')",
       },
       container: {
         center: true,

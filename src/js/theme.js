@@ -111,7 +111,79 @@
   });
 })();
 
-
+// Forçar favicon e meta tags no head
+(function () {
+  function forceFaviconAndMeta() {
+    const head = document.head;
+    
+    // Remover favicons existentes para evitar duplicatas
+    const existingFavicons = head.querySelectorAll('link[rel*="icon"], link[rel="apple-touch-icon"], link[rel="manifest"], meta[name="theme-color"]');
+    existingFavicons.forEach(el => el.remove());
+    
+    // Array com os elementos a serem inseridos
+    const faviconElements = [
+      {
+        tag: 'link',
+        attrs: {
+          rel: 'icon',
+          href: 'https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/FazBem/favicon/favicon.svg',
+          sizes: 'any'
+        }
+      },
+      {
+        tag: 'link',
+        attrs: {
+          rel: 'icon',
+          href: 'https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/FazBem/favicon/favicon.svg',
+          type: 'image/svg+xml'
+        }
+      },
+      {
+        tag: 'link',
+        attrs: {
+          rel: 'apple-touch-icon',
+          href: 'https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/FazBem/favicon/apple-touch-icon.png'
+        }
+      },
+      {
+        tag: 'link',
+        attrs: {
+          rel: 'manifest',
+          href: 'https://ik.imagekit.io/agenciapiu/AstraZeneca%20-%20MGg/FazBem/favicon/site.webmanifest'
+        }
+      },
+      {
+        tag: 'meta',
+        attrs: {
+          name: 'theme-color',
+          content: '#FFFFFF'
+        }
+      }
+    ];
+    
+    // Criar e inserir os elementos
+    faviconElements.forEach(elementData => {
+      const element = document.createElement(elementData.tag);
+      
+      // Adicionar todos os atributos
+      Object.keys(elementData.attrs).forEach(attr => {
+        element.setAttribute(attr, elementData.attrs[attr]);
+      });
+      
+      // Inserir no head
+      head.appendChild(element);
+    });
+    
+    console.log('✅ Favicon e meta tags forçados no head');
+  }
+  
+  // Executar quando o DOM estiver pronto
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', forceFaviconAndMeta);
+  } else {
+    forceFaviconAndMeta();
+  }
+})();
 
 // Header sticky quando o #hero sair da tela (usando classes do Tailwind)
 (function () {
